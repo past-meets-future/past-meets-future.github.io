@@ -304,6 +304,15 @@ nav.site.open .nav-burger .ico-close{display:block}
 ul.topics{margin:0 0 1.4rem;padding-left:1.15rem}
 ul.topics li{margin-bottom:.5rem;line-height:1.55}
 
+/* subpage hero fact rows */
+.hfacts{margin:1.7rem 0 0;max-width:44rem}
+.hfacts>div{display:grid;grid-template-columns:10rem 1fr;gap:1rem;padding:.7rem 0;border-top:1px solid var(--line)}
+.hfacts>div:last-child{border-bottom:1px solid var(--line)}
+.hfacts dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);line-height:2.1}
+.hfacts dd{margin:0;font-size:1.02rem;line-height:1.65;overflow-wrap:break-word}
+.hfacts dd b{color:var(--verm)}
+@media (max-width:40rem){.hfacts>div{grid-template-columns:1fr;gap:.05rem;padding:.65rem 0}.hfacts dt{line-height:1.8}}
+
 /* mobile design (2026-07-08): dedicated phone layout, not just reflow */
 .mob{display:none}
 html{scroll-padding-top:3.4rem}
