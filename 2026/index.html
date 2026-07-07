@@ -190,7 +190,7 @@
   var cnt = document.getElementById('hpcnt'), pause = document.getElementById('hppause');
   var aside = document.querySelector('.hero-plate');
   function show(n){ cur = ((n - 1 + N) % N) + 1;
-    for (var i = 1; i <= N; i++) var el=document.getElementById('hp'+i);el.classList.toggle('on',i===cur);el.setAttribute('aria-hidden',i===cur?'false':'true');
+    for (var i = 1; i <= N; i++) { var el=document.getElementById('hp'+i); el.classList.toggle('on', i===cur); el.setAttribute('aria-hidden', i===cur?'false':'true'); }
     cnt.textContent = cur + ' / ' + N; }
   function start(){ auto = true; pause.textContent = 'Pause'; pause.setAttribute('aria-pressed','false');
     if (timer) clearInterval(timer); timer = setInterval(function(){ show(cur + 1); }, 5000); }
