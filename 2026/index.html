@@ -4,332 +4,42 @@
 <meta charset="utf-8">
 <title>Past Meets Future 2026 · 3rd Workshop on Human-AI Interaction for Digital Humanities & Cultural Heritage</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Full-day workshop at ACM HCOMP 2026 ⊕ ACM Collective Intelligence 2026 — Sunday, Sept 27, 2026, Alexandria, VA. Papers due July 30. From challenges to solutions: human-AI interaction meets cultural heritage.">
+<meta name="description" content="Full-day workshop at ACM HCOMP 2026 ⊕ ACM Collective Intelligence 2026 — Sunday, Sept 27, 2026, Alexandria, VA. Papers due July 30.">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="icon" href="/shared/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/shared/brand/apple-touch-icon.png">
 <meta property="og:title" content="Past Meets Future 2026 — Human-AI Interaction for Digital Humanities & Cultural Heritage">
 <meta property="og:description" content="Sun Sept 27, 2026 · Alexandria, VA · at ACM HCOMP ⊕ CI 2026 · papers due July 30 (AoE). This year: from challenges to solutions.">
 <meta property="og:type" content="website">
-<!-- og:image: generate assets/img/og.jpg per MAINTENANCE.md before wide promotion -->
-<link rel="icon" href="/shared/brand/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/shared/brand/apple-touch-icon.png">
 </head>
 <body>
-<style>
-@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:200 800;font-display:swap;src:url(assets/fonts/BricolageGrotesque-var.woff2) format('woff2');}
-@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/fonts/Archivo-var.woff2) format('woff2');}
-@font-face{font-family:'Spline Sans Mono';font-style:normal;font-weight:300 700;font-display:swap;src:url(assets/fonts/SplineSansMono-var.woff2) format('woff2');}
-
-:root{
-  --bg:#FFFFFF; --ink:#16141A; --verm:#C1301C; --lapis:#24439B; --gold:#A87B00;
-  --lac:#191412; --bone:#F3EFE9; --line:#E3E0DA; --mut:#524E47; --card:#FAF9F7;
-  --disp:'Bricolage Grotesque','Arial Black',sans-serif;
-  --body:'Archivo','Helvetica Neue',Arial,sans-serif;
-  --mono:'Spline Sans Mono',ui-monospace,'SF Mono',Menlo,monospace;
-}
-@media (prefers-color-scheme: dark){
-  :root{ --bg:#191412; --ink:#F3EFE8; --verm:#FF7757; --lapis:#A9BDFF; --gold:#E5C15C;
-    --line:#3A332C; --mut:#BBB3A8; --card:#211B16; --lac:#110E0B; }
-}
-:root[data-theme="light"]{ --bg:#FFFFFF; --ink:#16141A; --verm:#C1301C; --lapis:#24439B;
-  --gold:#A87B00; --line:#E3E0DA; --mut:#524E47; --card:#FAF9F7; --lac:#191412; }
-:root[data-theme="dark"]{ --bg:#191412; --ink:#F3EFE8; --verm:#FF7757; --lapis:#A9BDFF;
-  --gold:#E5C15C; --line:#3A332C; --mut:#BBB3A8; --card:#211B16; --lac:#110E0B; }
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.08rem;line-height:1.65;-webkit-font-smoothing:antialiased}
-a{color:var(--lapis);text-underline-offset:3px}
-:focus-visible{outline:3px solid var(--verm);outline-offset:3px;border-radius:2px}
-img{max-width:100%;display:block}
-p{margin:0 0 1.05em}
-.wrap{max-width:74rem;margin:0 auto;padding:0 clamp(1.1rem,4vw,3rem)}
-.prose{max-width:64ch}
-
-/* milestone bar */
-.bar{position:sticky;top:0;z-index:50;background:var(--lac);color:var(--bone);
-  font-family:var(--mono);font-size:.8rem;letter-spacing:.08em;padding:.55rem 0;text-transform:uppercase}
-.bar .wrap{display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
-.bar .mk-ico{color:#FF7757;flex:0 0 auto}
-.bar b{font-weight:700;color:#FF9E85}
-.bar a{color:#F3EFE9;margin-left:auto}
-
-/* board ribbon */
-.ribbon{border-bottom:1px solid var(--line);font-family:var(--mono);font-size:.7rem;
-  letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:.5rem 0}
-.ribbon .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-
-/* nav */
-nav.site{border-bottom:2px solid var(--ink);background:var(--bg)}
-nav.site .wrap{display:flex;align-items:center;gap:1.4rem;padding-top:.8rem;padding-bottom:.8rem;flex-wrap:wrap}
-.nav-mark{display:flex;align-items:center;gap:.5rem;font-family:var(--disp);font-weight:800;font-size:1rem;letter-spacing:.02em;color:var(--ink);text-decoration:none;text-transform:uppercase}
-.nav-mark svg{color:var(--verm)}
-nav.site ul{display:flex;gap:1.2rem;list-style:none;margin:0 0 0 auto;padding:0;flex-wrap:wrap}
-nav.site ul a{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}
-nav.site ul a:hover{border-bottom-color:var(--verm);color:var(--verm)}
-nav.site ul a.cta{color:var(--verm);font-weight:700}
-
-.mk-ico{width:1.4em;height:1.4em;vertical-align:-.32em}
-
-/* ============ HERO ============ */
-.hero{padding:clamp(2.4rem,5.5vw,4.4rem) 0 0;text-align:left}
-.hero{position:relative}
-.hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 360'%3E%3Cg fill='none' stroke='%237A8082' stroke-opacity='.16'%3E%3Cg stroke-width='1.3'%3E%3Ccircle cx='62' cy='74' r='17'/%3E%3Cpath d='M62 47v54M35 74h54'/%3E%3C/g%3E%3Cg stroke-width='1' transform='rotate(14 268 96)'%3E%3Ccircle cx='268' cy='96' r='10'/%3E%3Cpath d='M268 80v32M252 96h32'/%3E%3C/g%3E%3Cg stroke-width='1.1' transform='rotate(-9 150 258)'%3E%3Ccircle cx='150' cy='258' r='13'/%3E%3Cpath d='M150 237v42M129 258h42'/%3E%3C/g%3E%3Cg stroke-width='.9'%3E%3Ccircle cx='316' cy='286' r='7'/%3E%3Cpath d='M316 274v24M304 286h24'/%3E%3C/g%3E%3Cpath stroke-width='1' d='M204 178h36M210 188h22' stroke-opacity='.12'/%3E%3Cpath stroke-width='1' d='M40 190h26M46 200h16' stroke-opacity='.12'/%3E%3C/g%3E%3C/svg%3E");
-  background-size:360px;opacity:.6;
-  -webkit-mask-image:linear-gradient(#000 40%,transparent 92%);mask-image:linear-gradient(#000 40%,transparent 92%)}
-/* Swap for the gpt-image-2 texture when generated:
-   background-image:url("assets/img/hero-texture-light.jpg") (light) / -dark.jpg (dark);
-   keep opacity <=.5 and the fade mask so headline contrast never drops below AA */
-.hero .wrap{position:relative;z-index:1}
-.hero-top{display:grid;grid-template-columns:1fr minmax(300px,430px);gap:clamp(2rem,4vw,4.5rem);align-items:center;margin-bottom:1.8rem}
-.hero-plate{position:relative;justify-self:end;transform:rotate(-1.6deg)}
-.hero-plate figure{margin:0;background:#FFFFFF;border:1px solid var(--line);padding:14px 14px 12px;box-shadow:0 14px 42px rgba(22,20,26,.16)}
-:root[data-theme="dark"] .hero-plate figure{background:#F3EFE9;border-color:#F3EFE9}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hero-plate figure{background:#F3EFE9;border-color:#F3EFE9}}
-.hero-plate img{width:100%;height:auto;display:block}
-.hero-plate figcaption{font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;color:#524E47;padding-top:.5rem;text-transform:uppercase;line-height:1.6}
-.hero-plate .cat{position:absolute;top:-1.5rem;right:.2rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;color:var(--mut)}
-@media (max-width:56rem){.hero-top{grid-template-columns:1fr}.hero-plate{display:none}}
-
-.kicker{font-family:var(--mono);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin:0 0 1.2rem}
-h1.word{font-family:var(--disp);font-weight:800;font-size:clamp(2.7rem,9vw,7.4rem);
-  line-height:.92;letter-spacing:-.02em;margin:0 0 1.4rem;text-transform:uppercase}
-h1.word span{display:block}
-.w-past{color:var(--ink);text-shadow:.045em .04em 0 var(--verm)}
-.w-meets{color:var(--verm);display:flex;align-items:center;gap:.18em;font-size:.42em;letter-spacing:.06em;margin:.18em 0}
-.w-meets svg{width:.95em;height:.95em}
-.w-fut{color:var(--ink);text-shadow:-.045em .04em 0 var(--lapis)}
-@media (prefers-reduced-motion: no-preference){
-  .w-past{animation:regP 1.1s cubic-bezier(.22,1,.36,1) both}
-  .w-fut{animation:regF 1.1s cubic-bezier(.22,1,.36,1) both}
-  @keyframes regP{from{text-shadow:.22em .16em 0 var(--verm)}to{text-shadow:.045em .04em 0 var(--verm)}}
-  @keyframes regF{from{text-shadow:-.22em .16em 0 var(--lapis)}to{text-shadow:-.045em .04em 0 var(--lapis)}}
-}
-.hero-sub{font-size:clamp(1.1rem,2.1vw,1.35rem);line-height:1.5;max-width:46ch;margin:0 0 1.8rem}
-.venueline{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;font-weight:700;font-size:1.06rem;margin-bottom:.4rem}
-.venueline .mk-ico{color:var(--verm)}
-.venue-note{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin:0 0 2rem}
-
-/* fact tiles */
-.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ink);border:2px solid var(--ink);margin-bottom:1.6rem}
-.fact{background:var(--bg);padding:1.1rem 1.2rem 1.2rem}
-.fact .fl{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:.45rem}
-.fact .fv{font-family:var(--disp);font-weight:750;font-size:clamp(1.15rem,2.2vw,1.65rem);line-height:1.08;display:block}
-.fact .fn{font-family:var(--mono);font-size:.68rem;color:var(--mut);display:block;margin-top:.45rem;letter-spacing:.04em}
-.fact.hot .fv{color:var(--verm)}
-.ctarow{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem}
-.btn{display:inline-block;font-family:var(--mono);font-weight:700;font-size:.88rem;letter-spacing:.1em;text-transform:uppercase;
-  padding:.95rem 1.5rem;text-decoration:none;border-radius:4px}
-.btn.p{background:#C1301C;color:#fff;border:2px solid #C1301C}
-.btn.p:hover{background:#A32615;border-color:#A32615}
-.btn.s{background:none;color:var(--ink);border:2px solid var(--ink)}
-.btn.s:hover{color:var(--verm);border-color:var(--verm)}
-
-/* task band (hero) */
-.taskband{margin-top:2.4rem;border-top:2px solid var(--ink);border-bottom:1px solid var(--line);padding:1rem 0;
-  font-family:var(--mono);font-size:.82rem;letter-spacing:.06em;line-height:2.1;color:var(--ink)}
-.taskband .x{color:var(--verm);padding:0 .55rem}
-
-/* ============ SHOWCASE CAROUSEL ============ */
-.show{border:2px solid var(--ink);margin-top:2.2rem;background:var(--bg)}
-.show-head{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:.65rem 1.1rem;
-  font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
-.show-head .lbl{color:var(--verm);font-weight:700}
-.show-head .cnt{color:var(--mut)}
-.show-head .sp{flex:1 1 auto}
-.sbtn{min-width:40px;min-height:34px;border:1.5px solid var(--ink);background:var(--bg);color:var(--ink);
-  font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;border-radius:4px;padding:.25rem .7rem}
-.sbtn:hover{border-color:var(--verm);color:var(--verm)}
-.sprog{height:3px;background:var(--line);position:relative;overflow:hidden}
-.sprog i{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--verm)}
-html.reduce .sprog{display:none}
-.sl{display:grid;grid-template-columns:11fr 9fr}
-.sl[hidden]{display:none}
-.sim{background:var(--card);display:flex;align-items:center;justify-content:center;padding:1.2rem;border-right:1px solid var(--line)}
-.simin{position:relative;max-height:400px}
-.simin img{max-height:400px;width:auto;max-width:100%;display:block}
-.simin svg{max-height:400px;width:100%;display:block}
-.sbx{position:absolute;border:2px solid #C1301C;box-shadow:0 0 0 2px rgba(255,255,255,.7);display:block}
-.sbx.blue{border-color:#24439B}
-.sbx.dash{border-style:dashed}
-.ssw{position:absolute;display:flex;gap:4px}
-.ssw i{width:20px;height:20px;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.3)}
-.stx{padding:1.5rem 1.6rem;display:flex;flex-direction:column;gap:.75rem;justify-content:center}
-.stx h3{font-family:var(--disp);font-weight:750;font-size:clamp(1.2rem,2.2vw,1.7rem);line-height:1.05;margin:0;text-transform:uppercase;letter-spacing:-.005em}
-.trow{display:grid;grid-template-columns:5.2rem 1fr;gap:.7rem;align-items:baseline}
-.trow .tl{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
-.trow.today .tl{color:var(--verm)}
-.trow.imagine .tl{color:var(--lapis)}
-.trow p{font-size:.94rem;line-height:1.55;margin:0}
-.trow.imagine p{font-style:italic}
-.scred{font-family:var(--mono);font-size:.66rem;letter-spacing:.05em;color:var(--mut);text-transform:uppercase;margin:.2rem 0 0}
-.smatch{display:flex;gap:.8rem;align-items:center;border:1px solid var(--line);padding:.55rem;background:var(--bg)}
-.smatch img{width:92px;height:auto}
-.smatch p{font-size:.78rem;line-height:1.45;margin:0;color:var(--mut)}
-.sl.slast{grid-template-columns:1fr}
-.sl.slast .stx{align-items:flex-start;padding:2.4rem 2rem;border-left:0}
-.sl.slast h3{color:var(--verm);font-size:clamp(1.5rem,3vw,2.3rem)}
-html:not(.js) .sl{display:grid!important}
-html:not(.js) .sl + .sl{border-top:2px solid var(--ink)}
-html:not(.js) .show-head .sbtn,html:not(.js) .sprog{display:none}
-@media (max-width:56rem){
-  .sl{grid-template-columns:1fr}
-  .sim{border-right:0;border-bottom:1px solid var(--line)}
-  .simin img,.simin svg{max-height:300px}
-  .trow{grid-template-columns:1fr;gap:.15rem}
-}
-
-/* ============ SECTIONS ============ */
-section.s{padding:clamp(3rem,7vw,5rem) 0 0}
-.shead{display:flex;align-items:baseline;gap:1rem;border-top:3px solid var(--ink);padding-top:.75rem;margin-bottom:2rem;flex-wrap:wrap}
-.shead h2{font-family:var(--disp);font-weight:750;font-size:clamp(1.5rem,3vw,2.2rem);letter-spacing:-.01em;margin:0;text-transform:uppercase}
-.shead .no{font-family:var(--mono);font-size:.74rem;color:var(--verm);letter-spacing:.12em}
-.shead .right{margin-left:auto;font-family:var(--mono);font-size:.72rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
-
-/* about */
-.rqs{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:1.8rem}
-.rq{border-left:3px solid var(--lapis);padding-left:1.2rem}
-.rq .n{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--lapis);text-transform:uppercase;display:block;margin-bottom:.4rem}
-.rq p{font-size:1.02rem;margin:0;line-height:1.6}
-
-/* challenges */
-.chal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
-.chal{border:1px solid var(--line);border-top:3px solid var(--lapis);padding:1.2rem 1.3rem}
-.chal.bridge{border-top-color:var(--verm);background:var(--card)}
-.chal h3{font-family:var(--disp);font-weight:750;font-size:1.05rem;margin:0 0 .5rem;text-transform:uppercase;letter-spacing:.01em;line-height:1.2}
-.chal .cq{font-size:.95rem;font-style:italic;margin:0 0 .7rem;line-height:1.5}
-.chal .ci{font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--mut);margin:0;line-height:1.9;text-transform:uppercase}
-@media (max-width:60rem){.chal-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:40rem){.chal-grid{grid-template-columns:1fr}}
-/* CFP */
-.cfp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-bottom:2rem}
-@media (max-width:60rem){.cfp-grid{grid-template-columns:1fr 1fr}}
-.fmt{border:2px solid var(--ink);padding:1.3rem 1.4rem}
-.fmt .fh{font-family:var(--disp);font-weight:750;font-size:1.15rem;margin:0 0 .5rem;text-transform:uppercase;letter-spacing:.01em}
-.fmt .fm{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;color:var(--verm);text-transform:uppercase;display:block;margin-bottom:.7rem}
-.fmt p{font-size:.92rem;color:var(--mut);margin:0;line-height:1.55}
-.cfp-facts{font-family:var(--mono);font-size:.85rem;line-height:2.3;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1rem 0;margin-bottom:1.6rem}
-.cfp-facts b{color:var(--verm);font-weight:700}
-.seal{display:inline-block;font-family:var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.1em;
-  text-transform:uppercase;color:#fff;background:#C1301C;padding:.32rem .6rem;border-radius:4px}
-
-/* dates ledger */
-table.ledger{width:100%;border-collapse:collapse;font-size:1rem}
-.ledger th{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;text-align:left;color:var(--mut);font-weight:500;border-bottom:2px solid var(--ink);padding:.5rem .8rem .5rem 0}
-.ledger td{border-bottom:1px solid var(--line);padding:.9rem .8rem .9rem 0;vertical-align:middle}
-.ledger .d{font-family:var(--mono);font-size:.85rem;white-space:nowrap}
-.ledger .st{font-family:var(--mono);font-size:.8rem;white-space:nowrap}
-.st-done{color:var(--lapis)}
-.st-pend{color:var(--mut)}
-
-/* organizers */
-.orgs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.org{border:1px solid var(--line);padding:1.15rem 1.3rem}
-.org .on{font-weight:700;font-size:1.06rem;line-height:1.3}
-.org .on a{color:var(--ink);text-decoration-color:var(--lapis)}
-.org .on a:hover{color:var(--lapis)}
-.org .oa{font-size:.88rem;color:var(--mut);line-height:1.45;margin:.15rem 0 .35rem}
-.org a{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
-
-/* venue */
-.venue-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,3rem)}
-.vfact{border-top:1px solid var(--line);padding:.8rem 0;display:grid;grid-template-columns:9rem 1fr;gap:1rem}
-.vfact dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);line-height:2}
-.vfact dd{margin:0;font-size:.98rem;line-height:1.6}
-
-/* editions */
-.ed-row{display:grid;grid-template-columns:4rem 5rem 1fr auto;gap:1.2rem;align-items:baseline;padding:1.05rem 0;border-bottom:1px solid var(--line)}
-.ed-row:first-of-type{border-top:1px solid var(--ink)}
-.ed-row .no{font-family:var(--mono);font-size:.78rem;color:var(--mut)}
-.ed-row .yr{font-family:var(--disp);font-weight:750;font-size:1.4rem}
-.ed-row .what{font-size:1rem}
-.ed-row .what small{display:block;color:var(--mut);font-size:.85rem}
-.ed-row.pending{color:var(--mut)}
-
-/* appendix */
-.appx{background:var(--card);border-top:3px solid var(--ink);margin-top:clamp(3rem,7vw,5rem)}
-.appx-head{font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);padding:1.1rem 0 0}
-.sw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(8.6rem,1fr));gap:1rem}
-.swx{border:1px solid var(--line);background:var(--bg)}
-.swx-chip{height:4.2rem;border-bottom:1px solid var(--line)}
-.swx-b{padding:.6rem .7rem}
-.swx-n{font-weight:700;font-size:.86rem}
-.swx-m{font-family:var(--mono);font-size:.62rem;color:var(--mut);line-height:1.7}
-.swx-r{font-size:.76rem;color:var(--mut);line-height:1.45;margin-top:.2rem}
-.two-ink{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,3rem);margin-bottom:2.2rem}
-.ink-card{border-left:4px solid var(--verm);padding-left:1.2rem}
-.ink-card.l{border-left-color:var(--lapis)}
-.ink-card h3{font-family:var(--disp);font-weight:750;font-size:1.1rem;margin:0 0 .4rem;text-transform:uppercase}
-.ink-card p{font-size:.92rem;color:var(--mut);margin:0;line-height:1.6}
-.spec{border-top:1px solid var(--line);padding:1.3rem 0;display:grid;grid-template-columns:11rem 1fr;gap:1.4rem;align-items:baseline}
-.spec-l{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;color:var(--mut);text-transform:uppercase;line-height:1.9}
-.pm{border-top:1px solid var(--line)}
-.pm-row{display:grid;grid-template-columns:2.4rem 1fr 1.2fr;gap:1.3rem;padding:1rem 0;border-bottom:1px solid var(--line)}
-.pm-row .n{font-family:var(--disp);font-weight:800;font-size:1.3rem;color:var(--verm);line-height:1}
-.pm-row h3{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;margin:0 0 .35rem}
-.pm-row p{font-size:.86rem;color:var(--mut);margin:0;line-height:1.55}
-.pm-row .mit h3{color:var(--lapis)}
-
-footer.colo{background:var(--lac);color:var(--bone);margin-top:clamp(3rem,6vw,4.5rem);padding:clamp(2.4rem,5vw,3.6rem) 0}
-footer.colo h2{font-family:var(--disp);font-weight:750;font-size:1.15rem;text-transform:uppercase;margin:0 0 1.2rem}
-footer.colo p,footer.colo li{font-family:var(--mono);font-size:.73rem;line-height:1.95;opacity:.92}
-footer.colo ul{padding-left:1.1rem;margin:0 0 1.2rem}
-footer.colo a{color:#FF9E85}
-
-@media (max-width:60rem){
-  .facts{grid-template-columns:repeat(2,1fr)}
-  .gallery .g3,.gallery .g4,.gallery .g5,.gallery .g7{grid-column:span 6}
-  .gt .gim,.gt.tall .gim{height:240px}
-  .cfp-grid{grid-template-columns:1fr}
-  .orgs{grid-template-columns:1fr 1fr}
-  .rqs,.venue-grid,.two-ink{grid-template-columns:1fr}
-  .pm-row{grid-template-columns:1fr;gap:.4rem}
-  .pm-row .n{font-size:1rem}
-}
-@media (max-width:40rem){
-  .gallery .g3,.gallery .g4,.gallery .g5,.gallery .g7{grid-column:span 12}
-  .gt .gim,.gt.tall .gim{height:min(52vh,300px)}
-  .orgs{grid-template-columns:1fr}
-  .ed-row{grid-template-columns:3rem 3.6rem 1fr}
-}
-</style>
-
-<a href="#cfp" style="position:absolute;left:-9999px;top:0;background:var(--bg);color:var(--ink);padding:.5rem 1rem;z-index:99" onfocus="this.style.left='1rem';this.style.top='3rem'" onblur="this.style.left='-9999px'">Skip to Call for Participation</a>
-
 <div class="bar" role="note">
   <div class="wrap">
     <svg class="mk-ico" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="20" cy="20" r="11"/><line x1="20" y1="2" x2="20" y2="38"/><line x1="2" y1="20" x2="38" y2="20"/></svg>
     <span><b>CFP open</b> · papers due July 30, 2026 · 11:59 pm AoE</span>
-    <a href="#cfp">How to submit →</a>
+    <a href="cfp/">How to submit →</a>
   </div>
 </div>
 
 <nav class="site" aria-label="Site">
   <div class="wrap">
-    <a class="nav-mark" href="#top">
+    <a class="nav-mark" href="">
       <svg class="mk-ico" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6"><circle cx="20" cy="20" r="11"/><line x1="20" y1="2" x2="20" y2="38"/><line x1="2" y1="20" x2="38" y2="20"/></svg>
       Past Meets Future
     </a>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#challenges">Challenges</a></li>
-      <li><a href="#cfp" class="cta">Call for Participation</a></li>
-      <li><a href="#dates">Dates</a></li>
-      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="cfp/" class="cta">Call for Participation</a></li>
+      <li><a href="attend/">Schedule &amp; Venue</a></li>
       <li><a href="#organizers">Organizers</a></li>
-      <li><a href="#venue">Venue</a></li>
-      <li><a href="#editions">Past Editions</a></li>
     </ul>
   </div>
 </nav>
-
-<!-- ============ HERO ============ -->
 <header class="hero" id="top">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero-top">
     <div>
-    <p class="kicker">3rd Annual Workshop · Sunday, September 27, 2026 · Alexandria, VA</p>
+    <p class="kicker">3rd Annual Workshop</p>
     <h1 class="word">
       <span class="w-past">Past</span>
       <span class="w-meets">Meets
@@ -345,13 +55,72 @@ footer.colo a{color:#FF9E85}
     </div>
     <p class="venue-note">One workshop, hosted jointly by two co-located conferences · a single registration covers both</p>
     </div>
-    <aside class="hero-plate" aria-label="Featured work from the collection">
-      <span class="cat">PMF.26.006</span>
-      <figure>
-        <img src="assets/img/shahnama.jpg" width="476" height="680" fetchpriority="high"
-          alt="'The Feast of Sada,' a folio from the Shahnama of Shah Tahmasp: a luminous courtly feast painted in mineral pigments, framed by columns of Persian verse.">
-        <figcaption>Shahnama of Shah Tahmasp · Tabriz, ca. 1525 · The Met · CC0</figcaption>
+    <aside class="hero-plate" aria-label="Works from the collection, each with its machine reading">
+      <figure class="hp-slide on" id="hp1">
+        <span class="cat">PMF.26.006</span>
+        <div class="hp-im"><div class="hp-in">
+          <img src="assets/img/shahnama.jpg" width="476" height="680" fetchpriority="high" alt="'The Feast of Sada' folio from the Shahnama of Shah Tahmasp: a courtly feast framed by Persian verse.">
+          <i class="sbx dash" style="left:12.5%;top:63%;width:75%;height:15%"></i>
+        </div></div>
+        <figcaption><b>Translation & text–image alignment</b><br>Shahnama of Shah Tahmasp · Tabriz, 1525 · The Met · CC0</figcaption>
       </figure>
+      <figure class="hp-slide" id="hp2">
+        <span class="cat">PMF.26.002</span>
+        <div class="hp-im"><div class="hp-in">
+          <img src="assets/img/great-wave-met.jpg" width="680" height="457" loading="lazy" alt="Hokusai's Great Wave off Kanagawa woodblock print.">
+          <i class="sbx" style="left:3.5%;top:4%;width:11%;height:23%"></i>
+        </div></div>
+        <figcaption><b>Collection discovery</b><br>Under the Wave off Kanagawa · Japan, ca. 1830 · The Met · CC0</figcaption>
+      </figure>
+      <figure class="hp-slide" id="hp3">
+        <span class="cat">PMF.26.001</span>
+        <div class="hp-im"><div class="hp-in">
+          <img src="assets/img/tribune-1906.jpg" width="487" height="680" loading="lazy" alt="1906 New-York Tribune front page with machine-detected headline and photo regions outlined.">
+          <i class="sbx" style="left:3%;top:9.2%;width:93%;height:3.6%"></i><i class="sbx blue" style="left:3%;top:13.6%;width:22.5%;height:12%"></i>
+        </div></div>
+        <figcaption><b>OCR & layout analysis</b><br>New-York Tribune, 1906 · Library of Congress · PD</figcaption>
+      </figure>
+      <figure class="hp-slide" id="hp4">
+        <span class="cat">PMF.26.004</span>
+        <div class="hp-im"><div class="hp-in">
+          <img src="assets/img/night-shining-white.jpg" width="680" height="510" loading="lazy" alt="Tang dynasty handscroll of Night-Shining White covered in red collector seals, seal clusters outlined.">
+          <i class="sbx" style="left:12%;top:42%;width:13%;height:23%"></i><i class="sbx" style="left:84%;top:3%;width:14%;height:23%"></i>
+        </div></div>
+        <figcaption><b>Provenance & period dating</b><br>Night-Shining White · China, ca. 750 · The Met · CC0</figcaption>
+      </figure>
+      <figure class="hp-slide" id="hp5">
+        <span class="cat">PMF.26.005</span>
+        <div class="hp-im"><div class="hp-in">
+          <img src="assets/img/papyrus.jpg" width="720" height="534" loading="lazy" alt="Book of the Dead papyrus with hieroglyphic text columns and the weighing-of-the-heart vignette outlined.">
+          <i class="sbx" style="left:36%;top:33%;width:19%;height:14%"></i><i class="sbx dash blue" style="left:26%;top:42%;width:36%;height:46%"></i>
+        </div></div>
+        <figcaption><b>Hieroglyph decipherment</b><br>Book of the Dead of Nauny · Egypt, ca. 1050 BCE · The Met · CC0</figcaption>
+      </figure>
+      <figure class="hp-slide" id="hp6">
+        <span class="cat">PMF.26.003</span>
+        <div class="hp-im"><div class="hp-in">
+          <img src="assets/img/huexotzinco.jpg" width="680" height="536" loading="lazy" alt="Huexotzinco Codex sheet with tribute pictograph regions outlined.">
+          <i class="sbx" style="left:76%;top:21%;width:21%;height:33%"></i><i class="sbx blue" style="left:2.5%;top:26%;width:42%;height:25%"></i>
+        </div></div>
+        <figcaption><b>Pictograph & glyph reading</b><br>Huexotzinco Codex · Mexico, 1531 · Library of Congress · PD</figcaption>
+      </figure>
+      <figure class="hp-slide" id="hp7">
+        <span class="cat">PMF.26.007</span>
+        <div class="hp-im"><div class="hp-in">
+          <img src="assets/img/wari-tunic.jpg" width="643" height="680" loading="lazy" alt="Wari tapestry tunic with a motif band outlined and five computed palette swatches.">
+          <i class="sbx dash" style="left:59%;top:7%;width:19%;height:85%"></i><span class="ssw" style="left:6%;bottom:6%"><i style="background:#AA732F"></i><i style="background:#B45153"></i><i style="background:#573523"></i><i style="background:#C5AD8F"></i><i style="background:#6D6656"></i></span>
+        </div></div>
+        <figcaption><b>Pattern analysis & computed palette</b><br>Tapestry tunic · Wari, Andes, 7th–9th c. · The Met · CC0</figcaption>
+      </figure>
+      <figure class="hp-slide" id="hp8">
+        <span class="cat">PMF.26.009</span>
+        <div class="hp-im"><div class="hp-in">
+          <img src="assets/img/cosmic-buddha.jpg" width="680" height="677" loading="lazy" alt="Smithsonian 3D laser scan of the Cosmic Buddha with relief field outlined.">
+          <i class="sbx" style="left:32%;top:18%;width:36%;height:55%"></i>
+        </div></div>
+        <figcaption><b>3D scanning · AR / VR access</b><br>Cosmic Buddha · China, ca. 550 · Smithsonian · CC0 · 3d.si.edu</figcaption>
+      </figure>
+      <div class="hp-ctl"><span id="hpcnt">1 / 8</span><button class="hp-btn" id="hppause" aria-pressed="false">Pause</button></div>
     </aside>
   </div>
     <div class="facts">
@@ -361,272 +130,23 @@ footer.colo a{color:#FF9E85}
       <div class="fact"><span class="fl">Notifications</span><span class="fv">Aug 7,<br>2026</span><span class="fn">early registration closes Aug 22</span></div>
     </div>
     <div class="ctarow">
-      <a class="btn p" href="#cfp">Read the Call for Participation</a>
+      <a class="btn p" href="cfp/">Read the Call for Participation</a>
       <a class="btn s" href="mailto:pastmeetsfuturehaiworkshop@gmail.com">Email the organizers</a>
     </div>
-
-    <p class="taskband" aria-label="Workshop topic areas">transcription across collections<span class="x">⊕</span>collection discovery<span class="x">⊕</span>XR · AR · VR<span class="x">⊕</span>subject identification<span class="x">⊕</span>photographer attribution<span class="x">⊕</span>period dating<span class="x">⊕</span>decipherment<span class="x">⊕</span>provenance<span class="x">⊕</span>audio enhancement<span class="x">⊕</span>metadata generation<span class="x">⊕</span>crowdsourcing + expert AI<span class="x">⊕</span>storytelling<span class="x">⊕</span>ethics of AI in archives</p>
   </div>
 </header>
-
-<!-- ============ ABOUT ============ -->
 <section class="s" id="about">
   <div class="wrap">
     <div class="shead"><span class="no">01</span><h2>About the Workshop</h2></div>
     <p class="lead prose" style="font-size:1.16rem">Digital history and cultural heritage hold invaluable societal narratives — yet scholars and practitioners face hard problems of data quality, accessibility, and engagement. Human-AI interaction can help at scale, but its potential remains largely untapped. This workshop bridges that gap: researchers and practitioners from HCI, AI, the digital humanities, and GLAM institutions, in one room, building shared methods.</p>
-    <div class="rqs">
-      <div class="rq"><span class="n">Research question 1</span><p>How can human-AI interaction enrich — and be enriched by — the domains of digital humanities and cultural heritage?</p></div>
-      <div class="rq"><span class="n">Research question 2</span><p>How can the challenges and datasets inherent in these domains stimulate innovation in human-AI interaction methodologies and frameworks?</p></div>
-    </div>
+    <p><a href="cfp/"><b>Read the Call for Participation →</b></a></p>
+    
   </div>
 </section>
 
-<!-- ============ CHALLENGES -> SOLUTIONS ============ -->
-<section class="s" id="challenges">
-  <div class="wrap">
-    <div class="shead"><span class="no">02</span><h2>From Challenges to Solutions</h2><span class="right">the 2026 theme</span></div>
-    <p class="lead prose">At the 2025 workshop, participants from GLAM, the humanities, HCI, and AI mapped the field's hardest problems together. That map is this year's starting line: <b>2026 is about answers</b> — prototypes, systems, studies, write-ups, and decks that move any of these challenges forward.</p>
-    <div class="show" id="show" aria-roledescription="carousel" aria-label="What AI can do with cultural heritage — demonstrated and imagined">
-      <div class="show-head">
-        <span class="lbl">What AI can do here</span>
-        <span class="cnt" id="scnt">1 / 11</span>
-        <span class="sp"></span>
-        <button class="sbtn" id="sprev" aria-label="Previous example">&larr;</button>
-        <button class="sbtn" id="spause" aria-pressed="false">Pause</button>
-        <button class="sbtn" id="snext" aria-label="Next example">&rarr;</button>
-      </div>
-      <div class="sprog" aria-hidden="true"><i id="sbar"></i></div>
-
-      <div class="sl" id="s1">
-        <div class="sim"><div class="simin">
-          <img loading="lazy" src="assets/img/tribune-1906.jpg" width="487" height="680" alt="1906 New-York Tribune front page with machine-detected headline and photo regions outlined.">
-          <i class="sbx" style="left:3%;top:9.2%;width:93%;height:3.6%"></i>
-          <i class="sbx blue" style="left:3%;top:13.6%;width:22.5%;height:12%"></i>
-          <i class="sbx" style="left:65.5%;top:27.4%;width:31%;height:4.6%"></i>
-        </div></div>
-        <div class="stx">
-          <h3>OCR &amp; layout analysis</h3>
-          <div class="trow today"><span class="tl">Today ·</span><p>A model locates headlines, columns, and photographs on a 1906 front page — these boxes come from the Library of Congress's own OCR data.</p></div>
-          <div class="trow imagine"><span class="tl">Imagine ·</span><p>Every newspaper of the twentieth century, searchable as one archive.</p></div>
-          <p class="scred">New-York Tribune, 1906 · Library of Congress · public domain</p>
-        </div>
-      </div>
-
-      <div class="sl" id="s2" hidden>
-        <div class="sim"><div class="simin">
-          <img loading="lazy" src="assets/img/night-shining-white.jpg" width="680" height="510" alt="Tang dynasty handscroll of Night-Shining White with collector-seal clusters outlined.">
-          <i class="sbx" style="left:12%;top:42%;width:13%;height:23%"></i>
-          <i class="sbx" style="left:84%;top:3%;width:14%;height:23%"></i>
-          <i class="sbx dash blue" style="left:29%;top:4%;width:26%;height:15%"></i>
-        </div></div>
-        <div class="stx">
-          <h3>Provenance &amp; period dating</h3>
-          <div class="trow today"><span class="tl">Today ·</span><p>Detecting and dating the collector seals on a Tang scroll reconstructs 1,200 years of ownership — provenance written on the object itself.</p></div>
-          <div class="trow imagine"><span class="tl">Imagine ·</span><p>A provenance graph spanning every collection on earth, one seal at a time.</p></div>
-          <p class="scred">Night-Shining White, ca. 750 · The Met · CC0</p>
-        </div>
-      </div>
-
-      <div class="sl" id="s3" hidden>
-        <div class="sim"><div class="simin">
-          <img loading="lazy" src="assets/img/papyrus.jpg" width="720" height="534" alt="Book of the Dead papyrus with hieroglyphic text columns and the weighing-of-the-heart vignette outlined.">
-          <i class="sbx" style="left:36%;top:33%;width:19%;height:14%"></i>
-          <i class="sbx" style="left:0.5%;top:32%;width:4.5%;height:55%"></i>
-          <i class="sbx dash blue" style="left:26%;top:42%;width:36%;height:46%"></i>
-        </div></div>
-        <div class="stx">
-          <h3>Hieroglyph decipherment</h3>
-          <div class="trow today"><span class="tl">Today ·</span><p>Text-region detection separates hieroglyphic columns from painted vignettes — the first step toward machine-assisted reading.</p></div>
-          <div class="trow imagine"><span class="tl">Imagine ·</span><p>A reading companion for every undeciphered fragment in every archive.</p></div>
-          <p class="scred">Book of the Dead of Nauny, ca. 1050 BCE · The Met · CC0</p>
-        </div>
-      </div>
-
-      <div class="sl" id="s4" hidden>
-        <div class="sim"><div class="simin">
-          <img loading="lazy" src="assets/img/gospel.jpg" width="494" height="680" alt="Ethiopian illuminated Gospel page with the central mandorla figure and rows of saints outlined.">
-          <i class="sbx" style="left:35%;top:13.5%;width:29%;height:20%"></i>
-          <i class="sbx dash blue" style="left:16%;top:40%;width:66%;height:35%"></i>
-        </div></div>
-        <div class="stx">
-          <h3>Subject &amp; person identification</h3>
-          <div class="trow today"><span class="tl">Today ·</span><p>Iconographic classification recognizes figures and scenes across manuscript traditions — who is depicted, and how the depiction travels.</p></div>
-          <div class="trow imagine"><span class="tl">Imagine ·</span><p>Every unnamed saint, donor, and sitter linked across the world's collections.</p></div>
-          <p class="scred">Illuminated Gospel, Ethiopia, 14th c. · The Met · CC0</p>
-        </div>
-      </div>
-
-      <div class="sl" id="s5" hidden>
-        <div class="sim"><div class="simin">
-          <img loading="lazy" src="assets/img/huexotzinco.jpg" width="680" height="536" alt="Huexotzinco Codex sheet with tribute pictograph regions outlined.">
-          <i class="sbx" style="left:76%;top:21%;width:21%;height:33%"></i>
-          <i class="sbx blue" style="left:2.5%;top:26%;width:42%;height:25%"></i>
-          <i class="sbx dash" style="left:26%;top:74%;width:71%;height:21%"></i>
-        </div></div>
-        <div class="stx">
-          <h3>Pictograph &amp; glyph reading</h3>
-          <div class="trow today"><span class="tl">Today ·</span><p>Document understanding treats a 1531 tribute record on its own terms — pictographs, counted goods, testimony that won a lawsuit.</p></div>
-          <div class="trow imagine"><span class="tl">Imagine ·</span><p>Nahua scribes' testimony searchable beside the colonial records it answered.</p></div>
-          <p class="scred">Huexotzinco Codex, 1531 · Library of Congress · public domain</p>
-        </div>
-      </div>
-
-      <div class="sl" id="s6" hidden>
-        <div class="sim"><div class="simin">
-          <img loading="lazy" src="assets/img/shahnama.jpg" width="476" height="680" alt="Shahnama folio with verse panels and caption cartouche outlined.">
-          <i class="sbx dash" style="left:12.5%;top:63%;width:75%;height:15%"></i>
-          <i class="sbx blue" style="left:47%;top:19.4%;width:30%;height:4.8%"></i>
-        </div></div>
-        <div class="stx">
-          <h3>Translation &amp; text–image alignment</h3>
-          <div class="trow today"><span class="tl">Today ·</span><p>Alignment maps four columns of Persian verse to the feast they describe — a bridge between reading and looking.</p></div>
-          <div class="trow imagine"><span class="tl">Imagine ·</span><p>Any page, any language, any century — read aloud in yours.</p></div>
-          <p class="scred">Shahnama of Shah Tahmasp, ca. 1525 · The Met · CC0</p>
-        </div>
-      </div>
-
-      <div class="sl" id="s7" hidden>
-        <div class="sim"><div class="simin">
-          <img loading="lazy" src="assets/img/great-wave-met.jpg" width="680" height="457" alt="Hokusai's Great Wave with the title cartouche outlined.">
-          <i class="sbx" style="left:3.5%;top:4%;width:11%;height:23%"></i>
-        </div></div>
-        <div class="stx">
-          <h3>Collection discovery</h3>
-          <div class="trow today"><span class="tl">Today ·</span><p>Image similarity links New York's impression of the Great Wave to Chicago's — same woodblock, different printing, 700 miles apart.</p></div>
-          <div class="smatch"><img loading="lazy" src="assets/img/great-wave-aic.jpg" width="92" height="63" alt="The Art Institute of Chicago's impression of the same print."><p><b>The match:</b> Art Institute of Chicago · CC0 — found by visual search.</p></div>
-          <div class="trow imagine"><span class="tl">Imagine ·</span><p>One visual query across every museum on earth.</p></div>
-          <p class="scred">Under the Wave off Kanagawa, ca. 1830 · The Met + AIC · CC0</p>
-        </div>
-      </div>
-
-      <div class="sl" id="s8" hidden>
-        <div class="sim"><div class="simin">
-          <img loading="lazy" src="assets/img/wari-tunic.jpg" width="643" height="680" alt="Wari tapestry tunic with a motif band outlined and five computed palette swatches overlaid.">
-          <i class="sbx dash" style="left:59%;top:7%;width:19%;height:85%"></i>
-          <span class="ssw" style="left:6%;bottom:6%" aria-hidden="true"><i style="background:#AA732F"></i><i style="background:#B45153"></i><i style="background:#573523"></i><i style="background:#C5AD8F"></i><i style="background:#6D6656"></i></span>
-        </div></div>
-        <div class="stx">
-          <h3>Pattern analysis &amp; palette extraction</h3>
-          <div class="trow today"><span class="tl">Today ·</span><p>These five swatches were computed from the tunic itself — a weaver's working palette from thirteen centuries ago.</p></div>
-          <div class="trow imagine"><span class="tl">Imagine ·</span><p>Motif kinship maps across the whole history of Andean weaving.</p></div>
-          <p class="scred">Tapestry tunic, Wari, 7th–9th c. · The Met · CC0 · funerary context noted with respect</p>
-        </div>
-      </div>
-
-      <div class="sl" id="s9" hidden>
-        <div class="sim"><div class="simin">
-          <img loading="lazy" src="assets/img/cosmic-buddha.jpg" width="680" height="677" alt="Smithsonian 3D laser scan of the Cosmic Buddha, robe reliefs outlined.">
-          <i class="sbx" style="left:32%;top:18%;width:36%;height:55%"></i>
-          <i class="sbx dash blue" style="left:27%;top:4%;width:46%;height:90%"></i>
-        </div></div>
-        <div class="stx">
-          <h3>3D scanning · AR / VR / XR</h3>
-          <div class="trow today"><span class="tl">Today ·</span><p>A laser scan made the robe's relief carvings legible for the first time — and the model is already explorable in AR at 3d.si.edu.</p></div>
-          <div class="trow imagine"><span class="tl">Imagine ·</span><p>Stepping into the cave temple that held it — in VR, from any classroom on earth.</p></div>
-          <p class="scred">Cosmic Buddha, ca. 550 · Smithsonian NMAA · CC0</p>
-        </div>
-      </div>
-
-      <div class="sl" id="s10" hidden>
-        <div class="sim"><div class="simin"><svg viewBox="0 0 1000 360" role="img" preserveAspectRatio="xMidYMid meet" aria-label="Waveform computed from the Fisk Jubilee Quartet 1909 recording of Swing Low, Sweet Chariot"><polygon points="0.0,155.1 3.3,147.2 6.7,135.3 10.0,147.2 13.4,143.4 16.7,145.2 20.1,141.8 23.4,128.1 26.8,130.5 30.1,135.9 33.4,141.2 36.8,149.2 40.1,154.3 43.5,126.6 46.8,74.0 50.2,47.1 53.5,50.1 56.9,99.3 60.2,89.2 63.5,82.6 66.9,87.8 70.2,95.6 73.6,113.2 76.9,93.8 80.3,102.1 83.6,97.0 87.0,97.2 90.3,103.8 93.6,96.0 97.0,95.8 100.3,115.2 103.7,121.9 107.0,119.1 110.4,107.4 113.7,113.1 117.1,92.9 120.4,41.4 123.7,126.0 127.1,127.2 130.4,118.8 133.8,118.5 137.1,113.7 140.5,134.2 143.8,135.4 147.2,140.6 150.5,134.6 153.8,127.7 157.2,122.5 160.5,129.3 163.9,141.8 167.2,152.6 170.6,118.3 173.9,125.6 177.3,99.4 180.6,30.0 183.9,112.6 187.3,77.8 190.6,82.0 194.0,93.2 197.3,124.0 200.7,108.8 204.0,114.6 207.4,102.3 210.7,98.4 214.0,110.7 217.4,95.1 220.7,108.5 224.1,115.2 227.4,125.2 230.8,129.8 234.1,140.4 237.5,118.7 240.8,122.1 244.1,111.8 247.5,71.7 250.8,126.2 254.2,125.1 257.5,117.8 260.9,128.4 264.2,129.9 267.6,78.1 270.9,80.4 274.2,69.0 277.6,107.5 280.9,125.0 284.3,130.5 287.6,105.6 291.0,114.6 294.3,121.2 297.7,120.8 301.0,116.0 304.3,118.8 307.7,135.4 311.0,76.7 314.4,93.2 317.7,90.5 321.1,41.1 324.4,98.2 327.8,82.5 331.1,80.8 334.4,83.5 337.8,110.5 341.1,76.4 344.5,61.9 347.8,72.8 351.2,125.0 354.5,120.2 357.9,68.2 361.2,117.8 364.5,127.5 367.9,122.5 371.2,138.0 374.6,126.0 377.9,119.5 381.3,118.5 384.6,140.2 388.0,114.2 391.3,93.5 394.6,34.2 398.0,60.3 401.3,122.7 404.7,124.2 408.0,134.4 411.4,124.3 414.7,132.4 418.1,131.2 421.4,127.3 424.7,134.6 428.1,118.2 431.4,116.4 434.8,116.0 438.1,144.3 441.5,145.5 444.8,149.7 448.2,124.3 451.5,94.5 454.8,38.4 458.2,101.7 461.5,89.0 464.9,87.3 468.2,88.0 471.6,98.2 474.9,122.5 478.3,107.9 481.6,102.1 484.9,103.7 488.3,104.8 491.6,113.5 495.0,103.0 498.3,116.4 501.7,108.3 505.0,126.9 508.4,133.5 511.7,150.8 515.1,111.9 518.4,102.0 521.7,66.0 525.1,103.2 528.4,126.8 531.8,130.7 535.1,124.7 538.5,138.4 541.8,86.7 545.2,76.2 548.5,55.5 551.8,110.1 555.2,130.7 558.5,129.6 561.9,121.2 565.2,134.7 568.6,105.6 571.9,82.3 575.3,146.2 578.6,113.5 581.9,110.1 585.3,118.2 588.6,94.2 592.0,72.8 595.3,97.6 598.7,76.9 602.0,75.2 605.4,68.0 608.7,77.7 612.0,138.2 615.4,54.3 618.7,78.6 622.1,83.5 625.4,61.2 628.8,62.2 632.1,67.3 635.5,89.0 638.8,127.2 642.1,127.1 645.5,118.8 648.8,127.8 652.2,131.2 655.5,132.3 658.9,120.2 662.2,122.7 665.6,113.2 668.9,66.6 672.2,124.8 675.6,120.9 678.9,139.7 682.3,125.6 685.6,135.8 689.0,134.8 692.3,135.4 695.7,144.2 699.0,126.5 702.3,121.9 705.7,127.2 709.0,149.8 712.4,144.6 715.7,110.5 719.1,121.7 722.4,108.0 725.8,61.6 729.1,93.2 732.4,83.4 735.8,85.2 739.1,79.3 742.5,96.3 745.8,123.8 749.2,102.5 752.5,110.2 755.9,36.9 759.2,110.1 762.5,112.3 765.9,118.2 769.2,106.3 772.6,117.8 775.9,139.2 779.3,138.9 782.6,155.7 786.0,100.2 789.3,113.7 792.6,80.5 796.0,47.7 799.3,127.2 802.7,134.1 806.0,122.1 809.4,140.2 812.7,130.8 816.1,129.9 819.4,132.0 822.7,144.2 826.1,150.8 829.4,144.3 832.8,123.6 836.1,130.3 839.5,146.1 842.8,144.2 846.2,165.8 849.5,121.7 852.8,104.5 856.2,66.0 859.5,114.3 862.9,94.4 866.2,84.1 869.6,82.5 872.9,98.8 876.3,137.2 879.6,121.5 882.9,111.5 886.3,106.8 889.6,102.0 893.0,104.0 896.3,123.0 899.7,120.6 903.0,119.7 906.4,124.0 909.7,143.7 913.0,143.1 916.4,126.9 919.7,138.0 923.1,124.7 926.4,131.4 929.8,113.8 933.1,115.8 936.5,115.8 939.8,147.2 943.1,141.9 946.5,148.2 949.8,148.9 953.2,147.6 956.5,147.2 959.9,138.0 963.2,139.9 966.6,149.2 969.9,147.8 973.2,147.3 976.6,151.2 979.9,154.2 983.3,158.8 986.6,160.2 990.0,163.8 993.3,160.8 996.7,166.3 1000.0,160.2 1000.0,199.8 996.7,193.7 993.3,199.2 990.0,196.2 986.6,199.8 983.3,201.2 979.9,205.8 976.6,208.8 973.2,212.7 969.9,212.2 966.6,210.8 963.2,220.1 959.9,222.0 956.5,212.8 953.2,212.4 949.8,211.1 946.5,211.8 943.1,218.1 939.8,212.8 936.5,244.2 933.1,244.2 929.8,246.2 926.4,228.6 923.1,235.3 919.7,222.0 916.4,233.1 913.0,216.9 909.7,216.3 906.4,235.9 903.0,240.3 899.7,239.4 896.3,237.0 893.0,256.1 889.6,258.0 886.3,253.2 882.9,248.6 879.6,238.5 876.3,222.8 872.9,261.1 869.6,277.5 866.2,275.9 862.9,265.6 859.5,245.7 856.2,294.0 852.8,255.4 849.5,238.3 846.2,194.2 842.8,215.8 839.5,213.9 836.1,229.7 832.8,236.4 829.4,215.7 826.1,209.2 822.7,215.8 819.4,228.0 816.1,230.1 812.7,229.2 809.4,219.8 806.0,237.9 802.7,225.9 799.3,232.8 796.0,312.3 792.6,279.4 789.3,246.3 786.0,259.8 782.6,204.3 779.3,221.1 775.9,220.8 772.6,242.2 769.2,253.7 765.9,241.8 762.5,247.7 759.2,249.9 755.9,323.1 752.5,249.8 749.2,257.6 745.8,236.2 742.5,263.7 739.1,280.6 735.8,274.8 732.4,276.6 729.1,266.9 725.8,298.4 722.4,252.0 719.1,238.3 715.7,249.4 712.4,215.4 709.0,210.2 705.7,232.8 702.3,238.1 699.0,233.6 695.7,215.8 692.3,224.6 689.0,225.2 685.6,224.2 682.3,234.4 678.9,220.3 675.6,239.1 672.2,235.2 668.9,293.4 665.6,246.8 662.2,237.3 658.9,239.8 655.5,227.7 652.2,228.8 648.8,232.2 645.5,241.2 642.1,232.9 638.8,232.8 635.5,271.1 632.1,292.6 628.8,297.8 625.4,298.8 622.1,276.4 618.7,281.4 615.4,305.7 612.0,221.8 608.7,282.3 605.4,292.1 602.0,284.9 598.7,283.1 595.3,262.4 592.0,287.2 588.6,265.8 585.3,241.8 581.9,249.9 578.6,246.4 575.3,213.8 571.9,277.6 568.6,254.4 565.2,225.3 561.9,238.8 558.5,230.4 555.2,229.3 551.8,249.9 548.5,304.5 545.2,283.8 541.8,273.3 538.5,221.6 535.1,235.3 531.8,229.3 528.4,233.2 525.1,256.8 521.7,294.0 518.4,258.0 515.1,248.1 511.7,209.2 508.4,226.5 505.0,233.1 501.7,251.7 498.3,243.6 495.0,256.9 491.6,246.4 488.3,255.2 484.9,256.4 481.6,257.9 478.3,252.1 474.9,237.4 471.6,261.8 468.2,271.9 464.9,272.7 461.5,271.1 458.2,258.3 454.8,321.6 451.5,265.5 448.2,235.7 444.8,210.3 441.5,214.5 438.1,215.7 434.8,244.1 431.4,243.6 428.1,241.8 424.7,225.4 421.4,232.7 418.1,228.8 414.7,227.6 411.4,235.7 408.0,225.6 404.7,235.8 401.3,237.3 398.0,299.7 394.6,325.8 391.3,266.6 388.0,245.8 384.6,219.8 381.3,241.5 377.9,240.4 374.6,234.0 371.2,222.0 367.9,237.4 364.5,232.5 361.2,242.2 357.9,291.8 354.5,239.8 351.2,235.1 347.8,287.2 344.5,298.1 341.1,283.6 337.8,249.4 334.4,276.4 331.1,279.1 327.8,277.5 324.4,261.8 321.1,318.9 317.7,269.6 314.4,266.9 311.0,283.4 307.7,224.6 304.3,241.2 301.0,244.1 297.7,239.2 294.3,238.8 291.0,245.4 287.6,254.4 284.3,229.5 280.9,235.1 277.6,252.4 274.2,291.0 270.9,279.6 267.6,281.9 264.2,230.1 260.9,231.6 257.5,242.2 254.2,234.9 250.8,233.8 247.5,288.3 244.1,248.2 240.8,237.9 237.5,241.3 234.1,219.6 230.8,230.2 227.4,234.8 224.1,244.8 220.7,251.6 217.4,264.9 214.0,249.3 210.7,261.6 207.4,257.7 204.0,245.4 200.7,251.2 197.3,235.9 194.0,266.9 190.6,277.9 187.3,282.1 183.9,247.4 180.6,330.0 177.3,260.6 173.9,234.4 170.6,241.7 167.2,207.4 163.9,218.2 160.5,230.7 157.2,237.4 153.8,232.3 150.5,225.4 147.2,219.4 143.8,224.6 140.5,225.8 137.1,246.3 133.8,241.5 130.4,241.2 127.1,232.8 123.7,234.0 120.4,318.6 117.1,267.1 113.7,246.9 110.4,252.6 107.0,240.9 103.7,238.1 100.3,244.8 97.0,264.1 93.6,264.0 90.3,256.2 87.0,262.8 83.6,262.9 80.3,257.9 76.9,266.2 73.6,246.8 70.2,264.4 66.9,272.2 63.5,277.4 60.2,270.8 56.9,260.7 53.5,309.9 50.2,312.9 46.8,286.1 43.5,233.4 40.1,205.7 36.8,210.8 33.4,218.8 30.1,224.1 26.8,229.5 23.4,231.9 20.1,218.2 16.7,214.8 13.4,216.6 10.0,212.8 6.7,224.7 3.3,212.8 0.0,204.9" fill="#24439B" opacity=".92"/><line x1="180.6" y1="14" x2="180.6" y2="346" stroke="#C1301C" stroke-width="3" stroke-dasharray="6 5"/><text x="192.6" y="34" font-family="Spline Sans Mono,monospace" font-size="22" fill="#C1301C">peak passage · 0:32</text><text x="14" y="345" font-family="Spline Sans Mono,monospace" font-size="20" fill="#524E47">victor 16453 · 180.3 s · computed from the recording</text></svg></div></div>
-        <div class="stx">
-          <h3>Audio enhancement</h3>
-          <div class="trow today"><span class="tl">Today ·</span><p>This waveform was computed from a 1909 shellac disc — the Fisk Jubilee Quartet, public domain since 2022.</p></div>
-          <div class="trow imagine"><span class="tl">Imagine ·</span><p>Every early recording denoised, transcribed, and singable again.</p></div>
-          <p class="scred">Swing Low, Sweet Chariot, 1909 · LOC National Jukebox · public domain</p>
-        </div>
-      </div>
-
-      <div class="sl slast" id="s11" hidden>
-        <div class="stx">
-          <h3>The next reading is yours</h3>
-          <div class="trow today"><span class="tl">You ·</span><p>A system, a prototype, a study, a critique that builds — if it moves any of these challenges toward a solution, it belongs here.</p></div>
-          <p><a class="btn p" href="#cfp" style="font-size:.8rem;padding:.75rem 1.2rem">Submit by July 30</a></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="chal-grid">
-      <div class="chal"><h3>AI–GLAM alignment</h3><p class="cq">What system features do we actually need to meet GLAM's needs?</p><p class="ci">accuracy &amp; AI slop · deepfakes · datasets &amp; benchmarks · uncertainty · context beyond accuracy</p></div>
-      <div class="chal"><h3>Cognitive, educational &amp; social impact</h3><p class="cq">How do — and how should — GLAM systems influence users and society?</p><p class="ci">critical thinking &amp; literacy · cognitive enhancement vs. diminishment · creativity · trust · damage control</p></div>
-      <div class="chal"><h3>Incentives</h3><p class="cq">Who pays for this work, and what does that change?</p><p class="ci">funding sources · commercial products · paywalls</p></div>
-      <div class="chal"><h3>IP, copyright &amp; authorship</h3><p class="cq">Who owns collections, models, and their outputs?</p><p class="ci">rights &amp; licensing · attribution · authorship of AI-assisted work</p></div>
-      <div class="chal"><h3>Ethics</h3><p class="cq">What must these systems never do — and who decides?</p><p class="ci">privacy · fairness · regulation</p></div>
-      <div class="chal bridge"><h3>The bridge is the method</h3><p class="cq">Humanities scholars know how to critique; technologists know how to build. Neither succeeds alone.</p><p class="ci">This workshop pairs critique that builds with building that listens — toward actionable solutions.</p></div>
-    </div>
-    <p style="font-family:var(--mono);font-size:.76rem;color:var(--mut);margin-top:1.4rem;letter-spacing:.05em">FULL CHALLENGE MAP: <a href="https://miro.com/app/board/uXjVJsfMSrs=/?share_link_id=113812323947" style="color:var(--lapis)">THE 2025 MIRO BOARD →</a> · VIEW-ONLY</p>
-  </div>
-</section>
-
-<!-- ============ CFP ============ -->
-<section class="s" id="cfp">
-  <div class="wrap">
-    <div class="shead"><span class="no">03</span><h2>Call for Participation</h2><span class="right"><span class="seal">Papers due July 30 · AoE</span></span></div>
-    <p class="prose"><b>This year, bring solutions.</b> Having mapped the field’s challenges in 2025, we welcome work that answers them — working systems, early prototypes, open-source tools, AR/VR/XR experiences, studies, write-ups, decks — in any of the four formats below, all equally valued. We welcome researchers and practitioners at any career stage, from any discipline — critique that builds, and building that listens. Four ways in:</p>
-    <div class="cfp-grid">
-      <div class="fmt"><span class="fm">Format A</span><h3 class="fh">Position paper</h3><p>A new 2–4 page paper on current or future work — including proposed solutions to the 2025 challenge map.</p></div>
-      <div class="fmt"><span class="fm">Format B</span><h3 class="fh">Published paper</h3><p>A previously published paper relevant to the workshop’s themes — bring work the community should see.</p></div>
-      <div class="fmt"><span class="fm">Format C</span><h3 class="fh">Systems &amp; prototypes</h3><p>Working systems, early prototypes, open-source contributions, datasets, tools — at any stage of polish. Demo them in the hands-on afternoon.</p></div>
-      <div class="fmt"><span class="fm">Format D</span><h3 class="fh">New modalities</h3><p>AR, VR, and XR experiences for heritage — immersive reconstructions, in-gallery overlays, spatial storytelling. Headsets welcome.</p></div>
-    </div>
-    <div class="cfp-facts">
-      <b>submit:</b> email your PDF or project link to pastmeetsfuturehaiworkshop@gmail.com by <b>July 30, 2026</b><br>
-      <b>review:</b> single-blind · organizers serve as the program committee<br>
-      <b>attend:</b> at least one author registers and presents in person · one registration covers HCOMP + CI<br>
-      <b>access:</b> we follow SIGACCESS guidance — accessibility requests welcome at any time
-    </div>
-    <a class="btn p" href="mailto:pastmeetsfuturehaiworkshop@gmail.com?subject=Past%20Meets%20Future%202026%20Submission">Submit by email</a>
-  </div>
-</section>
-
-<!-- ============ DATES ============ -->
-<section class="s" id="dates">
-  <div class="wrap">
-    <div class="shead"><span class="no">04</span><h2>Key Dates</h2><span class="right">all deadlines 11:59 pm Anywhere on Earth</span></div>
-    <div style="overflow-x:auto">
-    <table class="ledger">
-      <thead><tr><th scope="col">Date</th><th scope="col">Milestone</th><th scope="col">Status</th></tr></thead>
-      <tbody>
-        <tr><td class="d">2026-06-29</td><td>Call for Participation announced</td><td class="st st-done">✓ done</td></tr>
-        <tr><td class="d">2026-07-30</td><td><b>Workshop papers due</b> — email submission, 11:59 pm AoE</td><td class="st st-pend">· open</td></tr>
-        <tr><td class="d">2026-08-07</td><td>Acceptance notifications</td><td class="st st-pend">· pending</td></tr>
-        <tr><td class="d">2026-08-22</td><td>Conference early-registration deadline</td><td class="st st-pend">· pending</td></tr>
-        <tr><td class="d">2026-09-27</td><td><b>Workshop day</b> — full day, Alexandria, VA</td><td class="st st-pend">· pending</td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SCHEDULE ============ -->
-<section class="s" id="schedule">
-  <div class="wrap">
-    <div class="shead"><span class="no">05</span><h2>Schedule</h2><span class="right">draft · full-day · final program lands with notifications (Aug 7)</span></div>
-    <div style="overflow-x:auto">
-    <table class="ledger">
-      <thead><tr><th scope="col">Time</th><th scope="col">Session</th><th scope="col"></th></tr></thead>
-      <tbody>
-        <tr><td class="d">09:00–09:15</td><td><b>Welcome &amp; opening introductions</b></td><td></td></tr>
-        <tr><td class="d">09:15–10:00</td><td><b>Lightning talks</b> — accepted papers &amp; projects, 2–3 minutes each</td><td></td></tr>
-        <tr><td class="d">10:00–10:45</td><td><b>Keynote</b></td><td class="st st-pend">speaker TBA</td></tr>
-        <tr><td class="d">10:45–11:00</td><td style="color:var(--mut)">Coffee break</td><td></td></tr>
-        <tr><td class="d">11:00–12:30</td><td><b>Small-group discussion &amp; affinity mapping</b> — shared challenges and opportunities across HCI, AI, and GLAM</td><td></td></tr>
-        <tr><td class="d">12:30–14:00</td><td style="color:var(--mut)">Lunch — small groups, nearby restaurants</td><td></td></tr>
-        <tr><td class="d">14:00–15:30</td><td><b>Hands-on session I</b> — pitches, team formation, and making: datasets, prototypes, design sketches, writing</td><td></td></tr>
-        <tr><td class="d">15:30–15:45</td><td style="color:var(--mut)">Coffee break</td><td></td></tr>
-        <tr><td class="d">15:45–17:00</td><td><b>Hands-on session II</b> — work continues</td><td></td></tr>
-        <tr><td class="d">17:00–17:30</td><td><b>Report-outs &amp; closing</b> — next steps for the community</td><td></td></tr>
-      </tbody>
-    </table>
-    </div>
-    <p style="font-family:var(--mono);font-size:.74rem;color:var(--mut);margin-top:1.1rem;letter-spacing:.04em">MORNING REQUIRED · AFTERNOON HANDS-ON OPTIONAL · FOLLOWS THE SERIES' FULL-DAY FORMAT (IUI 2024) · COORDINATES WITH CROWDCAMP, RUNNING THE SAME DAY</p>
-  </div>
-</section>
-
-<!-- ============ ORGANIZERS ============ -->
 <section class="s" id="organizers">
   <div class="wrap">
-    <div class="shead"><span class="no">06</span><h2>Organizers</h2></div>
+    <div class="shead"><span class="no">02</span><h2>Organizers</h2></div>
     <div class="orgs">
       <div class="org"><div><div class="on"><a href="https://fei-shan.github.io/">Fei Shan</a></div><div class="oa">Ph.D. Candidate, Computer Science, Virginia Tech</div></div></div>
       <div class="org"><div><div class="on"><a href="https://shamur.ai/">David A. Shamma</a></div><div class="oa">Director of Computing Programs &amp; Professor, Northeastern University Oakland</div></div></div>
@@ -637,102 +157,49 @@ footer.colo a{color:#FF9E85}
     </div>
     <p style="font-family:var(--mono);font-size:.72rem;color:var(--mut);margin-top:1.2rem;letter-spacing:.05em">CONTACT · PASTMEETSFUTUREHAIWORKSHOP@GMAIL.COM</p>
   </section>
-
-<!-- ============ VENUE ============ -->
-<section class="s" id="venue">
-  <div class="wrap">
-    <div class="shead"><span class="no">07</span><h2>Venue &amp; Registration</h2></div>
-    <div class="venue-grid">
-      <dl>
-        <div class="vfact"><dt>Building</dt><dd>Virginia Tech Academic Building One, 3625 Potomac Ave., Alexandria, VA 22305 — VT's Innovation Campus, opened 2025</dd></div>
-        <div class="vfact"><dt>Metro</dt><dd>5-minute walk from Potomac Yard–VT station (Blue &amp; Yellow lines), one stop from Reagan National Airport</dd></div>
-        <div class="vfact"><dt>Parking</dt><dd>ParkMobile Zone #85129 · $4/hr (up to 4h) or $20/day</dd></div>
-      </dl>
-      <dl>
-        <div class="vfact"><dt>Registration</dt><dd><b>A single registration covers both conferences</b> — HCOMP 2026 and CI 2026 are co-located and jointly badged. All workshop attendees register; early deadline Aug 22.</dd></div>
-        <div class="vfact"><dt>Same day</dt><dd>CrowdCamp (the joint hackathon) also runs Sunday Sept 27 — our optional afternoon session coordinates with it.</dd></div>
-        <div class="vfact"><dt>Access</dt><dd>Accessibility FAQ published with the schedule; requests welcome anytime at pastmeetsfuturehaiworkshop@gmail.com</dd></div>
-      </dl>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PAST EDITIONS ============ -->
 <section class="s" id="editions">
   <div class="wrap">
-    <div class="shead"><span class="no">08</span><h2>Past Editions</h2></div>
+    <div class="shead"><span class="no">03</span><h2>Past Editions</h2></div>
     <div class="ed-row"><span class="no">№ 1</span><span class="yr">2024</span><span class="what"><a href="https://sites.google.com/view/past-meets-future-2024/home">ACM IUI · Greenville, SC</a><small>10 accepted works · interdisciplinary panel · afternoon hackathon</small></span><span></span></div>
     <div class="ed-row"><span class="no">№ 2</span><span class="yr">2025</span><span class="what"><a href="https://sites.google.com/view/past-meets-future-2025/home">ASIS&amp;T · near Washington, DC</a><small>2nd annual edition</small></span><span></span></div>
     <div class="ed-row"><span class="no">№ 3</span><span class="yr">2026</span><span class="what"><a href="#top">HCOMP ⊕ CI · Alexandria, VA</a><small>this edition — you are here</small></span><span class="seal">Current</span></div>
   </div>
   </div>
 </section>
-
-<footer class="colo" id="colophon">
+<footer class="colo">
   <div class="wrap">
-    <h2>Colophon &amp; Collection Credits</h2>
-    <ul>
-      <li>Book of the Dead for the Chantress of Amun, Nauny, ca. 1050 BCE, Thebes. The Met (30.3.31), Open Access CC0.</li>
-      <li>Han Gan, Night-Shining White, ca. 750, Tang dynasty. The Met (1977.78), Open Access CC0.</li>
-      <li>Illuminated Gospel, Lake Tana region, Ethiopia, late 14th–early 15th c. The Met (1998.66), Open Access CC0.</li>
-      <li>"The Feast of Sada," Shahnama of Shah Tahmasp, ca. 1525, Tabriz. The Met (1970.301.2), Open Access CC0.</li>
-      <li>Huexotzinco Codex, 1531, Nahua (Huejotzingo, Puebla). Library of Congress, Manuscript Division (MSS47662). No known restrictions on publication. Living Nahua legal heritage.</li>
-      <li>Katsushika Hokusai, Under the Wave off Kanagawa, ca. 1830–32. The Met (JP1847), Open Access CC0.</li>
-      <li>Tapestry tunic, Wari culture, Andes, 7th–9th c. The Met, Open Access CC0. Shown with respect for its funerary context.</li>
-      <li>New-York Tribune, Apr 19, 1906. Library of Congress, Chronicling America (sn83030214). Public domain.</li>
-      <li>Cosmic Buddha, Northern Qi dynasty, ca. 550–77 CE. 3D laser scan, Smithsonian NMAA (F1923.15), CC0 — explore the AR/VR model at 3d.si.edu.</li>
-      <li>Swing Low, Sweet Chariot — Fisk Jubilee Quartet, 1909 (Victor 16453). Library of Congress National Jukebox; US public domain since 2022 (17 U.S.C. §1401). Waveform computed from the recording itself.</li>
-    </ul>
-    <p>No archival imagery is AI-generated, filtered, or tinted. Frieze captions are task-level; no transcription ships without review by a named expert in that script. Accession numbers to be re-verified before launch. If we have framed your heritage wrongly, tell us and we will fix it within a week: pastmeetsfuturehaiworkshop@gmail.com</p>
-    <p>Set in Bricolage Grotesque, Archivo, and Spline Sans Mono (all OFL, subset &amp; embedded). Concept No. 3 — "In Register" — for the Past Meets Future 2026 website, 7 July 2026. JavaScript is used only for the solutions showcase; everything else is static HTML. Companions: DESIGN.md · PLAN.md · research/.</p>
-    <div style="display:flex;align-items:center;gap:.9rem;margin-top:1.6rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase">
+    <div style="display:flex;align-items:center;gap:.9rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.2rem">
       <span>ACM HCOMP 2026</span>
       <svg class="mk-ico" style="color:#FF7757" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="20" cy="20" r="11"/><line x1="20" y1="2" x2="20" y2="38"/><line x1="2" y1="20" x2="38" y2="20"/></svg>
       <span>ACM CI 2026</span>
     </div>
+    <p>One workshop · Sun Sept 27 2026 · Alexandria VA · a single registration covers both conferences.<br>
+    Contact: <a href="mailto:pastmeetsfuturehaiworkshop@gmail.com">pastmeetsfuturehaiworkshop@gmail.com</a> · <a href="colophon/">Collection credits &amp; colophon</a> · Past editions: <a href="https://sites.google.com/view/past-meets-future-2024/home">2024</a> · <a href="https://sites.google.com/view/past-meets-future-2025/home">2025</a></p>
   </div>
 </footer>
+
+
 <script>
 (function(){
-  var html = document.documentElement;
-  html.classList.add('js');
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) html.classList.add('reduce');
-  var N = 11, cur = 1, timer = null, DUR = 8000, auto = !reduce;
-  var cnt = document.getElementById('scnt'), bar = document.getElementById('sbar'),
-      pause = document.getElementById('spause'), box = document.getElementById('show');
-  function frame(i){ return document.getElementById('s' + i); }
-  function show(n){
-    cur = ((n - 1 + N) % N) + 1;
-    for (var i = 1; i <= N; i++) frame(i).hidden = (i !== cur);
-    cnt.textContent = cur + ' / ' + N;
-  }
-  function barRun(){
-    if (reduce) return;
-    bar.style.transition = 'none'; bar.style.width = '0';
-    void bar.offsetWidth;
-    bar.style.transition = 'width ' + DUR + 'ms linear'; bar.style.width = '100%';
-  }
-  function stop(){ auto = false; if (timer) clearInterval(timer); timer = null;
-    bar.style.width = '0'; pause.textContent = 'Play'; pause.setAttribute('aria-pressed','true'); }
+  var ctl = document.querySelector('.hp-ctl');
+  if (reduce) { if (ctl) ctl.hidden = true; return; }
+  var N = 8, cur = 1, timer = null, auto = true;
+  var cnt = document.getElementById('hpcnt'), pause = document.getElementById('hppause');
+  var aside = document.querySelector('.hero-plate');
+  function show(n){ cur = ((n - 1 + N) % N) + 1;
+    for (var i = 1; i <= N; i++) document.getElementById('hp' + i).classList.toggle('on', i === cur);
+    cnt.textContent = cur + ' / ' + N; }
   function start(){ auto = true; pause.textContent = 'Pause'; pause.setAttribute('aria-pressed','false');
-    barRun(); if (timer) clearInterval(timer);
-    timer = setInterval(function(){ show(cur + 1); barRun(); }, DUR); }
-  document.getElementById('snext').addEventListener('click', function(){ stop(); show(cur + 1); });
-  document.getElementById('sprev').addEventListener('click', function(){ stop(); show(cur - 1); });
+    if (timer) clearInterval(timer); timer = setInterval(function(){ show(cur + 1); }, 7000); }
+  function stop(){ auto = false; pause.textContent = 'Play'; pause.setAttribute('aria-pressed','true');
+    if (timer) clearInterval(timer); timer = null; }
   pause.addEventListener('click', function(){ auto ? stop() : start(); });
-  box.addEventListener('keydown', function(e){
-    if (e.key === 'ArrowRight') { e.preventDefault(); stop(); show(cur + 1); }
-    if (e.key === 'ArrowLeft')  { e.preventDefault(); stop(); show(cur - 1); }
-  });
-  box.addEventListener('focusin', function(){ if (auto) stop(); });
-  var hoverPaused = false;
-  box.addEventListener('pointerenter', function(){ if (auto) { hoverPaused = true; if (timer) clearInterval(timer); timer = null; } });
-  box.addEventListener('pointerleave', function(){ if (auto && hoverPaused) { hoverPaused = false; start(); } });
-  show(1);
-  if (auto) start(); else stop();
+  var hov = false;
+  aside.addEventListener('pointerenter', function(){ if (auto && timer) { hov = true; clearInterval(timer); timer = null; } });
+  aside.addEventListener('pointerleave', function(){ if (auto && hov) { hov = false; start(); } });
+  start();
 })();
 </script>
-
 </body>
 </html>
