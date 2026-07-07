@@ -66,7 +66,7 @@ nav.site ul a.cta{color:var(--verm);font-weight:700}
 :root[data-theme="light"] .hero-bg{background-image:url(../img/hero-texture-light.jpg);mix-blend-mode:multiply}
 .hero .wrap{position:relative;z-index:1}
 .hero-top{display:grid;grid-template-columns:1fr minmax(300px,430px);gap:clamp(2rem,4vw,4.5rem);align-items:center;margin-bottom:1.8rem}
-.hero-plate{position:relative;justify-self:end;transform:rotate(-1.6deg)}
+.hero-plate{position:relative;justify-self:end;display:flex;flex-direction:column;gap:.6rem;width:100%;max-width:430px}
 
 
 
@@ -229,7 +229,19 @@ footer.colo a{color:#FF9E85}
 }
 
 /* hero rotating plate */
-.hero-plate{min-height:560px}
+.hp-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:var(--mono);
+  font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.hp-lbl{color:var(--verm);font-weight:700}
+.hp-ctl2{display:inline-flex;align-items:center;gap:.7rem}
+.hp-stage{position:relative;min-height:540px;transform:rotate(-1.6deg)}
+/* the reading event: boxes draw in after the artifact lands */
+.hp-slide .sbx,.hp-slide .ssw{opacity:0;transform:scale(.94);transition:opacity .45s ease,transform .45s ease}
+.hp-slide.on .sbx,.hp-slide.on .ssw{opacity:1;transform:none}
+.hp-slide.on .sbx:nth-of-type(1){transition-delay:.55s}
+.hp-slide.on .sbx:nth-of-type(2){transition-delay:.85s}
+.hp-slide.on .sbx:nth-of-type(3){transition-delay:1.15s}
+.hp-slide.on .ssw{transition-delay:.85s}
+@media (prefers-reduced-motion:reduce){.hp-slide .sbx,.hp-slide .ssw{opacity:1!important;transform:none!important;transition:none!important}}
 .hp-slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;pointer-events:none;display:flex;flex-direction:column;justify-content:center}
 .hp-slide.on{opacity:1;pointer-events:auto;position:relative}
 .hp-slide figure,.hp-slide{margin:0}
@@ -246,7 +258,6 @@ footer.colo a{color:#FF9E85}
 .ssw i{width:20px;height:20px;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.3)}
 .hp-slide figcaption{font-family:var(--mono);font-size:.7rem;letter-spacing:.05em;color:#524E47;padding-top:.55rem;text-transform:uppercase;line-height:1.7}
 .hp-slide figcaption b{color:#16141A;font-size:.78rem}
-.hp-ctl{display:flex;gap:.9rem;align-items:center;justify-content:flex-end;margin-top:.6rem;font-family:var(--mono);font-size:.68rem;color:var(--mut);letter-spacing:.08em}
 .hp-btn{border:1px solid var(--line);background:none;color:var(--mut);font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .6rem;border-radius:4px;cursor:pointer;min-height:30px}
 .hp-btn:hover{color:var(--verm);border-color:var(--verm)}
 

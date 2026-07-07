@@ -5,7 +5,7 @@
 <title>Past Meets Future 2026 · 3rd Workshop on Human-AI Interaction for Digital Humanities & Cultural Heritage</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Full-day workshop at ACM HCOMP 2026 ⊕ ACM Collective Intelligence 2026 — Sunday, Sept 27, 2026, Alexandria, VA. Papers due July 30.">
-<link rel="stylesheet" href="assets/css/site.css?v=5">
+<link rel="stylesheet" href="assets/css/site.css?v=6">
 <link rel="icon" href="/shared/brand/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/shared/brand/apple-touch-icon.png">
 <meta property="og:title" content="Past Meets Future 2026 — Human-AI Interaction for Digital Humanities & Cultural Heritage">
@@ -60,8 +60,12 @@
     
     </div>
     <aside class="hero-plate" aria-label="Works from the collection, each with its machine reading">
+      <div class="hp-head">
+        <span class="hp-lbl">What AI can do here</span>
+        <span class="hp-ctl2"><span id="hpcnt">1 / 8</span><button class="hp-btn" id="hppause" aria-pressed="false">Pause</button></span>
+      </div>
+      <div class="hp-stage">
       <figure class="hp-slide on" id="hp1">
-        <span class="cat">PMF.26.006</span>
         <div class="hp-im"><div class="hp-in">
           <img src="assets/img/shahnama.jpg" width="476" height="680" fetchpriority="high" alt="'The Feast of Sada' folio from the Shahnama of Shah Tahmasp: a courtly feast framed by Persian verse.">
           <i class="sbx dash" style="left:12.5%;top:63%;width:75%;height:15%"></i>
@@ -69,7 +73,6 @@
         <figcaption><b>Translation & text–image alignment</b><br>Shahnama of Shah Tahmasp · Tabriz, 1525 · The Met · CC0</figcaption>
       </figure>
       <figure class="hp-slide" id="hp2" aria-hidden="true">
-        <span class="cat">PMF.26.002</span>
         <div class="hp-im"><div class="hp-in">
           <img src="assets/img/great-wave-met.jpg" width="680" height="457" loading="lazy" alt="Hokusai's Great Wave off Kanagawa woodblock print.">
           <i class="sbx" style="left:3.5%;top:4%;width:11%;height:23%"></i>
@@ -77,7 +80,6 @@
         <figcaption><b>Collection discovery</b><br>Under the Wave off Kanagawa · Japan, ca. 1830 · The Met · CC0</figcaption>
       </figure>
       <figure class="hp-slide" id="hp3" aria-hidden="true">
-        <span class="cat">PMF.26.001</span>
         <div class="hp-im"><div class="hp-in">
           <img src="assets/img/tribune-1906.jpg" width="487" height="680" loading="lazy" alt="1906 New-York Tribune front page with machine-detected headline and photo regions outlined.">
           <i class="sbx" style="left:3%;top:9.2%;width:93%;height:3.6%"></i><i class="sbx blue" style="left:3%;top:13.6%;width:22.5%;height:12%"></i>
@@ -85,7 +87,6 @@
         <figcaption><b>OCR & layout analysis</b><br>New-York Tribune, 1906 · Library of Congress · PD</figcaption>
       </figure>
       <figure class="hp-slide" id="hp4" aria-hidden="true">
-        <span class="cat">PMF.26.004</span>
         <div class="hp-im"><div class="hp-in">
           <img src="assets/img/night-shining-white.jpg" width="680" height="510" loading="lazy" alt="Tang dynasty handscroll of Night-Shining White covered in red collector seals, seal clusters outlined.">
           <i class="sbx" style="left:12%;top:42%;width:13%;height:23%"></i><i class="sbx" style="left:84%;top:3%;width:14%;height:23%"></i>
@@ -93,7 +94,6 @@
         <figcaption><b>Provenance & period dating</b><br>Night-Shining White · China, ca. 750 · The Met · CC0</figcaption>
       </figure>
       <figure class="hp-slide" id="hp5" aria-hidden="true">
-        <span class="cat">PMF.26.005</span>
         <div class="hp-im"><div class="hp-in">
           <img src="assets/img/papyrus.jpg" width="720" height="534" loading="lazy" alt="Book of the Dead papyrus with hieroglyphic text columns and the weighing-of-the-heart vignette outlined.">
           <i class="sbx" style="left:36%;top:33%;width:19%;height:14%"></i><i class="sbx dash blue" style="left:26%;top:42%;width:36%;height:46%"></i>
@@ -101,7 +101,6 @@
         <figcaption><b>Hieroglyph decipherment</b><br>Book of the Dead of Nauny · Egypt, ca. 1050 BCE · The Met · CC0</figcaption>
       </figure>
       <figure class="hp-slide" id="hp6" aria-hidden="true">
-        <span class="cat">PMF.26.003</span>
         <div class="hp-im"><div class="hp-in">
           <img src="assets/img/huexotzinco.jpg" width="680" height="536" loading="lazy" alt="Huexotzinco Codex sheet with tribute pictograph regions outlined.">
           <i class="sbx" style="left:76%;top:21%;width:21%;height:33%"></i><i class="sbx blue" style="left:2.5%;top:26%;width:42%;height:25%"></i>
@@ -109,7 +108,6 @@
         <figcaption><b>Pictograph & glyph reading</b><br>Huexotzinco Codex · Mexico, 1531 · Library of Congress · PD</figcaption>
       </figure>
       <figure class="hp-slide" id="hp7" aria-hidden="true">
-        <span class="cat">PMF.26.007</span>
         <div class="hp-im"><div class="hp-in">
           <img src="assets/img/wari-tunic.jpg" width="643" height="680" loading="lazy" alt="Wari tapestry tunic with a motif band outlined and five computed palette swatches.">
           <i class="sbx dash" style="left:59%;top:7%;width:19%;height:85%"></i><span class="ssw" style="left:6%;bottom:6%"><i style="background:#AA732F"></i><i style="background:#B45153"></i><i style="background:#573523"></i><i style="background:#C5AD8F"></i><i style="background:#6D6656"></i></span>
@@ -117,14 +115,13 @@
         <figcaption><b>Pattern analysis & computed palette</b><br>Tapestry tunic · Wari, Andes, 7th–9th c. · The Met · CC0</figcaption>
       </figure>
       <figure class="hp-slide" id="hp8" aria-hidden="true">
-        <span class="cat">PMF.26.009</span>
         <div class="hp-im"><div class="hp-in">
           <img src="assets/img/cosmic-buddha.jpg" width="680" height="677" loading="lazy" alt="Smithsonian 3D laser scan of the Cosmic Buddha with relief field outlined.">
           <i class="sbx" style="left:32%;top:18%;width:36%;height:55%"></i>
         </div></div>
         <figcaption><b>3D scanning · AR / VR access</b><br>Cosmic Buddha · China, ca. 550 · Smithsonian · CC0 · 3d.si.edu</figcaption>
       </figure>
-      <div class="hp-ctl"><span id="hpcnt">1 / 8</span><button class="hp-btn" id="hppause" aria-pressed="false">Pause</button></div>
+      </div>
     </aside>
   </div>
     <div class="facts">
@@ -187,7 +184,7 @@
 <script>
 (function(){
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var ctl = document.querySelector('.hp-ctl');
+  var ctl = document.querySelector('.hp-ctl2');
   if (reduce) { if (ctl) ctl.hidden = true; return; }
   var N = 8, cur = 1, timer = null, auto = true;
   var cnt = document.getElementById('hpcnt'), pause = document.getElementById('hppause');
@@ -196,13 +193,10 @@
     for (var i = 1; i <= N; i++) var el=document.getElementById('hp'+i);el.classList.toggle('on',i===cur);el.setAttribute('aria-hidden',i===cur?'false':'true');
     cnt.textContent = cur + ' / ' + N; }
   function start(){ auto = true; pause.textContent = 'Pause'; pause.setAttribute('aria-pressed','false');
-    if (timer) clearInterval(timer); timer = setInterval(function(){ show(cur + 1); }, 7000); }
+    if (timer) clearInterval(timer); timer = setInterval(function(){ show(cur + 1); }, 5000); }
   function stop(){ auto = false; pause.textContent = 'Play'; pause.setAttribute('aria-pressed','true');
     if (timer) clearInterval(timer); timer = null; }
   pause.addEventListener('click', function(){ auto ? stop() : start(); });
-  var hov = false;
-  aside.addEventListener('pointerenter', function(){ if (auto && timer) { hov = true; clearInterval(timer); timer = null; } });
-  aside.addEventListener('pointerleave', function(){ if (auto && hov) { hov = false; start(); } });
   start();
 })();
 </script>
