@@ -62,7 +62,7 @@
     <aside class="hero-plate" aria-label="Works from the collection, each with its machine reading">
       <div class="hp-head">
         <span class="hp-lbl">What AI can do here</span>
-        <span class="hp-ctl2"><span id="hpcnt">1 / 8</span><button class="hp-btn" id="hppause" aria-pressed="false">Pause</button></span>
+        <span class="hp-ctl2"><span id="hpcnt">1 / 10</span><button class="hp-btn" id="hppause" aria-pressed="false">Pause</button></span>
       </div>
       <div class="hp-stage">
       <figure class="hp-slide on" id="hp1">
@@ -121,6 +121,24 @@
         </div></div>
         <figcaption><b>3D scanning · AR / VR access</b><br>Cosmic Buddha · China, ca. 550 · Smithsonian · CC0 · 3d.si.edu</figcaption>
       </figure>
+      <figure class="hp-slide" id="hp9" aria-hidden="true">
+        <div class="hp-im"><div class="hp-in">
+          <img src="assets/img/company-e.jpg" width="680" height="545" loading="lazy" alt="Company E of the 4th U.S. Colored Infantry standing in ranks at Fort Lincoln, 1865, with machine-detected face and insignia regions outlined.">
+          <i class="sbx" style="left:43.7%;top:43.9%;width:4.4%;height:7.2%"></i>
+          <i class="sbx blue" style="left:12.2%;top:49.4%;width:4.8%;height:8.6%"></i>
+          <i class="sbx dash blue" style="left:29%;top:2%;width:44%;height:5.6%"></i>
+        </div></div>
+        <figcaption><b>Face recognition &amp; person identification</b><br>Company E, 4th U.S. Colored Infantry, 1865 · Library of Congress · PD · overlay illustrative</figcaption>
+      </figure>
+      <figure class="hp-slide" id="hp10" aria-hidden="true">
+        <div class="hp-im"><div class="hp-in">
+          <img src="assets/img/studio-backdrop.jpg" width="680" height="545" loading="lazy" alt="Cased ambrotype of two unidentified Union soldiers seated before a painted studio backdrop of a military camp; the backdrop scenery is outlined, not the faces.">
+          <i class="sbx" style="left:16%;top:28%;width:14%;height:50%"></i>
+          <i class="sbx dash blue" style="left:71%;top:22%;width:16%;height:32%"></i>
+        </div></div>
+        <figcaption><b>Photographer attribution · via studio backdrops</b><br>Two unidentified soldiers · Liljenquist Collection, Library of Congress · PD</figcaption>
+      </figure>
+      
       </div>
     </aside>
   </div>
@@ -186,7 +204,7 @@
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var ctl = document.querySelector('.hp-ctl2');
   if (reduce) { if (ctl) ctl.hidden = true; return; }
-  var N = 8, cur = 1, timer = null, auto = true;
+  var N = 10, cur = 1, timer = null, auto = true;
   var cnt = document.getElementById('hpcnt'), pause = document.getElementById('hppause');
   var aside = document.querySelector('.hero-plate');
   function show(n){ cur = ((n - 1 + N) % N) + 1;
