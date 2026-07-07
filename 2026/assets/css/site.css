@@ -330,7 +330,7 @@ html{scroll-padding-top:3.4rem}
   .nav-mark{order:0;margin-right:auto}
   .theme-btn{order:1;width:38px;height:38px}
   .nav-burger{display:inline-flex;order:2}
-  nav.site ul{order:3;flex-basis:100%;flex-direction:column;gap:0;margin:.55rem 0 .15rem}
+  nav.site ul{order:3;flex-basis:100%;flex-direction:column;align-items:stretch;gap:0;margin:.55rem 0 .15rem;text-align:left}
   .js nav.site ul{display:none}
   .js nav.site.open ul{display:flex}
   nav.site ul li{border-top:1px solid var(--line)}
