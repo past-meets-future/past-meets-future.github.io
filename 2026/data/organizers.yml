@@ -1,8 +1,10 @@
-# Names + affiliations only (no headshots — organizer decision 2026-07-08)
-# Rendered as two lines per card: role first, institution on its own line (organizer decision 2026-07-07)
-- {name: Fei Shan, role: "Ph.D. Candidate, Computer Science", institution: "Virginia Tech", url: "https://fei-shan.github.io/"}
-- {name: David A. Shamma, role: "Director of Computing Programs & Professor", institution: "Northeastern University Oakland", url: "https://shamur.ai/"}
-- {name: Victoria Van Hyning, role: "Assistant Professor", institution: "University of Maryland iSchool", url: "https://vanhyningvictoria.com/"}
-- {name: Benjamin C. G. Lee, role: "Assistant Professor", institution: "University of Washington iSchool", url: "https://bcglee.github.io/"}
-- {name: Vikram Mohanty, role: "Postdoctoral Fellow, HCI Institute", institution: "Carnegie Mellon University", url: "https://vikrammohanty.com/"}
-- {name: Kurt Luther, role: "Associate Professor of Computer Science", institution: "Virginia Tech", url: "https://crowd.cs.vt.edu/kurt-luther/"}
+# Rendered as photo + two lines per card: role first, institution on its own line (organizer decision 2026-07-07)
+# Photos restored per organizer feedback 2026-07-07 (supersedes the earlier names-only decision);
+# sourced from each organizer's public site or institutional/lab page, credited in the colophon.
+# Files live in 2026/assets/img/organizers/; rendered grayscale via CSS, originals untouched.
+- {name: Fei Shan, role: "Ph.D. Candidate, Computer Science", institution: "Virginia Tech", url: "https://fei-shan.github.io/", photo: "assets/img/organizers/shan.jpg", photo_source: "https://crowd.cs.vt.edu/people/"}
+- {name: David A. Shamma, role: "Director of Computing Programs & Professor", institution: "Northeastern University Oakland", url: "https://shamur.ai/", photo: "assets/img/organizers/shamma.jpg", photo_source: "https://github.com/ayman (public profile photo)"}
+- {name: Victoria Van Hyning, role: "Assistant Professor", institution: "University of Maryland iSchool", url: "https://vanhyningvictoria.com/", photo: "assets/img/organizers/vanhyning.jpg", photo_source: "https://vanhyningvictoria.com/"}
+- {name: Benjamin C. G. Lee, role: "Assistant Professor", institution: "University of Washington iSchool", url: "https://bcglee.github.io/", photo: "assets/img/organizers/lee.jpg", photo_source: "https://ischool.uw.edu/people/faculty/profile/bcgl"}
+- {name: Vikram Mohanty, role: "Postdoctoral Fellow, HCI Institute", institution: "Carnegie Mellon University", url: "https://vikrammohanty.com/", photo: "assets/img/organizers/mohanty.jpg", photo_source: "https://vikrammohanty.com/"}
+- {name: Kurt Luther, role: "Associate Professor of Computer Science", institution: "Virginia Tech", url: "https://crowd.cs.vt.edu/kurt-luther/", photo: "assets/img/organizers/luther.jpg", photo_source: "https://crowd.cs.vt.edu/kurt-luther/ (photo by Tonia Moxley)"}

@@ -23,7 +23,7 @@ Note: the series' earlier editions said "Digital History." The accepted 2026 pro
   - Acceptance notifications: August 7, 2026
   - Conference early-bird registration: **no date on our site** — the approved copy is "Early-bird registration and its deadline will be announced on the ACM HCOMP 2026 and CI 2026 websites" (organizer decision 2026-07-08; the earlier Aug 22 claim was retracted)
   - Workshop day: September 27, 2026
-- **2026 theme:** "From challenges to solutions" — the 2025 edition mapped the field's challenges (Miro board; five clusters: AI–GLAM alignment · cognitive/educational/social impact · incentives · IP/copyright/authorship · ethics); 2026 solicits solutions: systems, prototypes, open source, AR/VR/XR, write-ups, decks. CFP has FOUR formats (position paper / published paper / systems & prototypes / new modalities). **Site copy shows three challenge cards** — incentives and IP/copyright/authorship were dropped from the CFP page (organizer decision 2026-07-08) — plus the full-width "bridge is the method" card, and must always say topics are NOT limited to the map ("The map is not a checklist").
+- **2026 theme:** "From challenges to solutions" — the 2025 edition mapped the field's challenges (Miro board; five clusters: AI–GLAM alignment · cognitive/educational/social impact · incentives · IP/copyright/authorship · ethics); 2026 solicits work that ADDRESSES them: systems, prototypes, open source, AR/VR/XR, write-ups, decks. CFP has FOUR formats (position paper / published paper / systems & prototypes / new modalities) plus the restored topics-of-interest bullets from 2024/2025 (Metaverse bullet now includes "new modalities such as AR, VR, and XR"). **Site copy shows three challenge cards** — incentives and IP/copyright/authorship were dropped from the CFP page (organizer decision 2026-07-08) — plus the full-width "bridge is the method" card, and must always say topics are NOT limited to the map ("The map is not a checklist"). **Language rule (organizer feedback 2026-07-07): "exploring solutions" / "addressing challenges", never "answers" or "bring solutions"; submissions demonstrate interest and relevance, solutions are ideated together at the workshop; be realistic that nothing is solved in one afternoon.** The Miro board is NOT linked publicly; it is shared with accepted participants.
 - **Contact:** pastmeetsfuturehaiworkshop@gmail.com · Workshop chairs list: hcomp-ci-2026-workshops@acm.org
 - **Past editions:** № 1 — ACM IUI 2024, Greenville, SC (the 2026 Google Sites draft says "Clemson, SC" — the 2024 site and workshop paper say Greenville; verify and use one). № 2 — ASIS&T 2025, near Washington, DC.
 - **CFP inheritance (from 2024/2025, to adapt):** three submission formats — (a) new 2–4 page position paper, (b) previously published paper, (c) link to a digital project / video demo; organizers as program committee, single-blind review; at least one author registers and attends.
@@ -90,14 +90,14 @@ The identity's assets are REAL open-access artifacts, not generated art. Pipelin
 | # | Item | Owner |
 |---|---|---|
 | 1 | ~~Paper deadline~~ CONFIRMED: July 30, 2026 · email submission | done |
-| 2 | ~~Miro URL~~ RECEIVED + linked; owner must set view-only + de-identify | Mohanty |
+| 2 | ~~Miro URL~~ RESOLVED 2026-07-07: NOT linked publicly (organizer decision); shared with accepted participants; key clusters named on the CFP page instead | done |
 | 3 | Cross-organizer sign-off on the 2026 collection (8 core + pool); sensitivity review of Wari/Ge'ez framing lines | all six |
 | 4 | Named expert reviewers per script before any transcription text ships (Ge'ez, nasta'liq, Nahuatl, classical Chinese) — until then geometry only | Van Hyning lead? |
 | 5 | Greenville vs Clemson for IUI 2024 line | anyone |
 | 6 | Canonical title wording ("Digital Humanities") vs accepted proposal | Shan/Luther |
 | 7 | GitHub org creation + who holds admin (bus-factor: ≥2 organizers) | Mohanty |
 | 8 | Repoint conference listings after launch (email workshops chairs — note Mohanty co-chairs) | Mohanty |
-| 9 | ~~Headshots~~ RESOLVED: names + affiliations only (organizer decision) | done |
+| 9 | ~~Headshots~~ REVERSED 2026-07-07 (Luther feedback): photos added from organizers' own public pages (`organizers.yml` `photo_source`), grayscale via CSS, credited in colophon | done |
 | 10 | Sponsors (Google Sites says TBD) — seal-chip "SUPPORTED BY" row when they exist | organizers |
 | 11 | Re-verify museum accession numbers in credit slugs before launch | builder |
 | 12 | Keynote speaker confirmation (schedule shows TBA) | organizers |
