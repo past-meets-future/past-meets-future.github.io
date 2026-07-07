@@ -296,6 +296,13 @@ nav.site a[aria-current="page"]{border-bottom-color:var(--verm);color:var(--verm
 ul.topics{margin:0 0 1.4rem;padding-left:1.15rem}
 ul.topics li{margin-bottom:.5rem;line-height:1.55}
 
+/* mobile pass (2026-07-08) */
+.vfact dd{overflow-wrap:break-word}
+@media (max-width:40rem){
+  .vfact{grid-template-columns:1fr;gap:.1rem;padding:.7rem 0}
+  .vfact dt{line-height:1.7}
+}
+
 /* colophon credit register */
 .credits{border-top:1px solid var(--line)}
 .cr{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr);gap:1.4rem;padding:1rem 0;border-bottom:1px solid var(--line)}
