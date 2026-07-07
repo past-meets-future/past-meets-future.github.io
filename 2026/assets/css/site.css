@@ -287,6 +287,14 @@ nav.site a[aria-current="page"]{border-bottom-color:var(--verm);color:var(--verm
 }
 .theme-btn:hover{border-color:var(--verm);color:var(--verm)}
 
+/* burger (mobile only; display gated in the 48rem media block) */
+.nav-burger{display:none;align-items:center;justify-content:center;background:none;
+  border:1.5px solid var(--line);color:var(--ink);width:38px;height:38px;padding:0;border-radius:50%;cursor:pointer}
+.nav-burger:hover{border-color:var(--verm);color:var(--verm)}
+.nav-burger .ico-close{display:none}
+nav.site.open .nav-burger .ico-burger{display:none}
+nav.site.open .nav-burger .ico-close{display:block}
+
 /* organizer feedback pass (2026-07-07) */
 .kicker .k3{color:var(--verm);font-weight:700}
 .venueline a{color:var(--ink);text-decoration-color:var(--verm);text-decoration-thickness:2px;text-underline-offset:4px}
@@ -308,12 +316,17 @@ html{scroll-padding-top:3.4rem}
   .bar{font-size:.66rem;letter-spacing:.05em;padding:.5rem 0}
   .bar .wrap{flex-wrap:nowrap;gap:.9rem;justify-content:space-between}
   .bar span,.bar a{white-space:nowrap}
-  /* nav: brand + theme toggle on row one, links in a tight row below */
-  nav.site .wrap{padding-top:.65rem;padding-bottom:.7rem;row-gap:.55rem}
+  /* nav: brand + theme toggle + burger on one row; links in a dropdown panel */
+  nav.site .wrap{padding-top:.65rem;padding-bottom:.65rem;row-gap:0}
   .nav-mark{order:0;margin-right:auto}
-  .theme-btn{order:1;width:36px;height:36px}
-  nav.site ul{order:2;flex-basis:100%;margin:0;justify-content:space-between;gap:.8rem;flex-wrap:nowrap;overflow-x:auto;padding-bottom:2px}
-  nav.site ul a{font-size:.64rem;letter-spacing:.04em;white-space:nowrap}
+  .theme-btn{order:1;width:38px;height:38px}
+  .nav-burger{display:inline-flex;order:2}
+  nav.site ul{order:3;flex-basis:100%;flex-direction:column;gap:0;margin:.55rem 0 .15rem}
+  .js nav.site ul{display:none}
+  .js nav.site.open ul{display:flex}
+  nav.site ul li{border-top:1px solid var(--line)}
+  nav.site ul a{display:block;padding:.95rem .1rem;font-size:.78rem;letter-spacing:.1em;border-bottom:none}
+  nav.site a[aria-current="page"]{border-bottom:none}
 }
 
 @media (max-width:40rem){

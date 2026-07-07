@@ -5,10 +5,10 @@
 <title>Colophon & Collection Credits · Past Meets Future 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Every image on this site is CC0 or public domain · full credits, rights statements, and site policies.">
-<link rel="stylesheet" href="../assets/css/site.css?v=10">
+<link rel="stylesheet" href="../assets/css/site.css?v=11">
 <link rel="icon" href="/shared/brand/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/shared/brand/apple-touch-icon.png">
-<script>try{var t=localStorage.getItem('pmf-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script>try{var t=localStorage.getItem('pmf-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#main" style="position:absolute;left:-9999px;top:0;background:var(--bg);color:var(--ink);padding:.6rem 1.1rem;z-index:99;font-family:var(--mono);font-size:.8rem" onfocus="this.style.left='1rem';this.style.top='1rem'" onblur="this.style.left='-9999px'">Skip to content</a>
@@ -25,7 +25,7 @@
       <svg class="mk-ico" viewBox="0 0 64 64" aria-hidden="true"><circle cx="41" cy="39" r="15.5" fill="var(--lapis)"/><rect x="12" y="14" width="27" height="27" rx="3" transform="rotate(-7 25.5 27.5)" fill="var(--verm)"/><clipPath id="mknav"><rect x="12" y="14" width="27" height="27" rx="3" transform="rotate(-7 25.5 27.5)"/></clipPath><circle cx="41" cy="39" r="15.5" fill="var(--ink)" clip-path="url(#mknav)"/></svg>
       Past Meets Future
     </a>
-    <ul>
+    <ul id="navLinks">
       <li><a href="../cfp/" class="cta">Call for Participation</a></li>
       <li><a href="../attend/">Schedule &amp; Venue</a></li>
       <li><a href="../#organizers">Organizers</a></li>
@@ -34,6 +34,10 @@
         <svg class="ico-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
         <svg class="ico-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><path d="M12 1.5v2.8M12 19.7v2.8M1.5 12h2.8M19.7 12h2.8M4.6 4.6l2 2M17.4 17.4l2 2M19.4 4.6l-2 2M6.6 17.4l-2 2"/></svg>
       </button>
+    <button class="nav-burger" id="navBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+      <svg class="ico-burger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3.5 6h17M3.5 12h17M3.5 18h17"/></svg>
+      <svg class="ico-close" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
   </div>
 </nav>
 <main id="main">
@@ -91,6 +95,13 @@ function cur(){var t=document.documentElement.getAttribute('data-theme');if(t)re
 function label(){b.setAttribute('aria-label',cur()==='dark'?'Switch to light theme':'Switch to dark theme')}
 b.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);
 try{localStorage.setItem('pmf-theme',n)}catch(e){}label()});label()})();
+</script>
+<script>
+(function(){var b=document.getElementById('navBtn'),n=document.querySelector('nav.site');if(!b||!n)return;
+function set(o){b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Close menu':'Open menu')}
+b.addEventListener('click',function(){set(n.classList.toggle('open'))});
+n.querySelectorAll('ul a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');set(false)})});
+})();
 </script>
 </body>
 </html>
