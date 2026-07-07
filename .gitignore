@@ -1,13 +1,9 @@
-# Internal planning/research — kept local, not published (contains candid design deliberations)
+# Local-only: candid design deliberations + copyrighted paper — never publish
+# (CLAUDE.md, DESIGN.md, PLAN.md, MAINTENANCE.md and the agent skills ARE tracked,
+#  so teammates can work on the site with Claude Code. This repo is public.)
 vision.md
 research/
-DESIGN.md
-PLAN.md
-CLAUDE.md
 3640544.3645257.pdf
 
-# Tooling
-.agents/
-.claude/
-skills-lock.json
+# OS
 .DS_Store

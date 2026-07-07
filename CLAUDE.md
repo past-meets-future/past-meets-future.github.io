@@ -1,0 +1,44 @@
+# Past Meets Future — Workshop Website
+
+Static website for the "Past Meets Future" academic workshop series (Human-AI Interaction for Digital Humanities and Cultural Heritage). Current edition: 2026, at ACM HCOMP 2026 × ACM Collective Intelligence 2026 — one full-day workshop, Sunday Sept 27, 2026, Alexandria, VA.
+
+Read `PLAN.md` (architecture, verified facts, phases, open items) and `DESIGN.md` (the brand & design spec: "In Register") before making changes. Plain hand-written HTML/CSS/JS, GitHub Pages deploy-from-branch, no build step, no frameworks.
+
+## Design Context
+
+### Users
+
+Prospective workshop participants and the broader community: HCI researchers, GLAM professionals (librarians, archivists, curators), digital humanities / digital history scholars, human-AI interaction researchers, and industry practitioners. They arrive to answer: What is this workshop? Should I submit — by when, in what format? Who's organizing? Is it worth attending? Academics print the CFP; archivists check whether cultural material is handled with respect and proper rights attribution.
+
+### Brand Personality
+
+An advertisement for a serious venue. Three words: **registered, global, urgent**. The brand is "In Register": past ⊕ future, human ⊕ AI, HCOMP ⊕ CI — two plates, one impression. Poster-confident like a museum exhibition campaign, rigorous like an accession record; the page's job is to drive submissions and attendance.
+
+### Aesthetic Direction
+
+"In Register" (full spec in DESIGN.md; concept No. 3): Gallery White ground (#FFFFFF), Overprint Ink text (#16141A), two brand inks — Vermilion #C1301C (human plate, from the collector seals on Night-Shining White) and Lapis #24439B (machine plate, from the Shahnama's ultramarine) — plus Urushi Lacquer dark mode (#191412, vermilion-on-lacquer). Type: Bricolage Grotesque display + Archivo body + Spline Sans Mono machine voice. The wordmark prints off-register and aligns once on load (the only motion); the collection appears as a static ten-work frieze spanning six continents and four modalities (page/print/textile/3D/audio), with a task index band naming the field's breadth (transcription, discovery, XR/AR/VR, attribution, dating, decipherment…). Artifact imagery is never filtered or tinted. Anti-references (all standing rules from organizer feedback): Anthropic's house style (cream/paper grounds, soft serifs, clay accents — two prior versions rejected for this), AI-startup dark-neon, parchment kitsch, US-Civil-War/single-organizer-project imagery, host-venue maroon/orange, fonts Fraunces/Instrument Serif/Besley/Alegreya.
+
+### Design Principles
+
+1. **Advertise first.** The homepage exists to drive submissions: deadline visible three times above the fold, CFP leads the nav, fact tiles (When/Where/Papers due/Notifications) before any showpiece. Nothing essential may depend on hover, click, or JS — the concept page ships with zero JavaScript.
+2. **Global and multi-modal by construction.** The collection must span continents AND modalities (documents, prints, textiles, 3D/XR, audio); no single culture, war, or organizer project may dominate. Cross-organizer sign-off on every object; no contested-provenance objects; respectful context for funerary/sacred items; never the word "specimen" in user-facing copy.
+3. **Honest annotations only.** Task-level geometry from real sources (LoC ALTO, computed palettes, visible seals/script). No transcription text without a named expert's review. No AI-generated archival imagery, ever.
+4. **Provenance on the plate.** Every artifact carries a visible credit slug (INSTITUTION · ACCESSION · LICENSE) so screenshots travel with their rights; verbatim rights statements in the colophon plus the correction pledge.
+5. **Scholarship in seconds.** Sticky milestone bar (current deadline + AoE) in the first HTML kilobyte of every page; CFP/dates/organizers one click away; print stylesheet on CFP and Dates; status-line empty states ("AWAITING ACCESSION: …"), never TBD.
+6. **Budgeted craft.** Hero-critical ≤340KB, Lighthouse ≥95 + throttled-4G pass before merge; the only motion is the wordmark registering once on load (reduced-motion safe); promotional animation lives in the Remotion teaser, not the site.
+7. **Reskin by curation.** Each edition accessions a new collection and samples its accent from the lead object's pigment (≥4.5:1 on white); record it in the pigment ledger; announce next year's at the closing session.
+
+## Working Conventions
+
+- **Never edit past-year folders** (`/2024/`, `/2025/`, and eventually `/2026/` after the event). Archives are frozen; each new year appends.
+- **Data files are canonical:** structured content lives in `2026/data/*.yml` (dates, organizers, papers, schedule). Edit YAML first, then regenerate the corresponding HTML section to match. Deadlines render from `dates.yml` everywhere they appear; always state AoE. `organizers.yml` splits `role` and `institution` — cards render as exactly two lines (role line, then institution alone).
+- **Copy voice — zero em/en dashes** in anything user-facing (pages, meta tags, YAML labels). Hyphen for ranges/compounds (`2-4 pp`, `AI-GLAM`); comma, colon, period, or mono `·` otherwise. Run the `humanizer` skill on every copy pass; no AI-writing tells. Grep `—|–` across `2026/` before shipping. The schedule is labeled "tentative" (never "draft") until the final program lands Aug 7.
+- **Claims discipline:** never state logistics the organizers haven't confirmed. Early registration is always "Early-bird registration and its deadline will be announced on the ACM HCOMP 2026 and CI 2026 websites" (no dates); no CrowdCamp-coordination, badging, or per-session attendance claims.
+- **CFP is a big tent:** three challenge cards (AI-GLAM alignment · cognitive/educational/social impact · ethics) plus the full-width bridge card — incentives and IP/copyright/authorship were removed by organizer decision. Always say topics are not limited to the map, name the audiences (HCI, AI, humanities, GLAM; students; any career stage), and keep the "unsure whether your work fits? email us and ask" line.
+- **Layout economy:** subpage H1s ("Call for Participation", "Schedule & Venue", "Colophon & Credits") render on ONE line — the `h1.word` block-stacking is scoped to the homepage wordmark classes only. Never let a proper name break mid-phrase (use a `white-space:nowrap` span); subpage hero subtitles use `max-width:none`. Don't impose line breaks the copy doesn't need.
+- **One workshop, two venues:** copy must never read as two separate editions. Use the ⊕ joint-accession lockup and the three mono facts (one workshop / one venue / one registration).
+- **Official names:** "ACM HCOMP 2026" is the 2026 ACM Conference on Human-AI Complementarity and Alignment (NOT "Human Computation and Crowdsourcing" — it moved from AAAI and was renamed). "CI 2026" is the 14th ACM Collective Intelligence Conference. Workshop title uses "Digital Humanities" (per accepted proposal), not "Digital History."
+- **PDFs and assets live in this repo**, never on personal Drive/Dropbox links.
+- **Fonts are self-hosted** subset woff2 in `assets/fonts/` with system fallbacks; no Google Fonts CDN links in production.
+- **Accessibility is content:** skip link, landmarks, one h1/page, keyboard-operable disclosures (no hover-only), visible Seal Red focus rings, real alt text on portraits and plates, print stylesheet on the CFP.
+- Installed agent skills (`.agents/skills/`, symlinked in `.claude/skills/`): `design-taste-frontend` (anti-slop frontend rules), `remotion-best-practices` (for teaser/promo videos — e.g., the lens sweeping the collection, in motion), `humanizer` (de-slop writing pass: run it on any user-facing copy; no em/en dashes, no AI-writing tells). The impeccable plugin provides `/impeccable:critique`, `/impeccable:polish`, `/impeccable:audit` for review passes.
