@@ -180,6 +180,14 @@ table.ledger{width:100%;border-collapse:collapse;font-size:1rem}
 .ed-row .what{font-size:1rem}
 .ed-row .what small{display:block;color:var(--mut);font-size:.85rem}
 .ed-row.pending{color:var(--mut)}
+.ed-row .tag{justify-self:end}
+@media (max-width:40rem){
+  .ed-row{grid-template-columns:auto auto 1fr;grid-template-areas:"no yr tag" "what what what";gap:.3rem 1rem;padding:.95rem 0;align-items:center}
+  .ed-row .no{grid-area:no}
+  .ed-row .yr{grid-area:yr;font-size:1.25rem}
+  .ed-row .tag{grid-area:tag;justify-self:end}
+  .ed-row .what{grid-area:what}
+}
 
 /* appendix */
 .appx{background:var(--card);border-top:3px solid var(--ink);margin-top:clamp(3rem,7vw,5rem)}
@@ -225,7 +233,6 @@ footer.colo a{color:#FF9E85}
   .gallery .g3,.gallery .g4,.gallery .g5,.gallery .g7{grid-column:span 12}
   .gt .gim,.gt.tall .gim{height:min(52vh,300px)}
   .orgs{grid-template-columns:1fr}
-  .ed-row{grid-template-columns:3rem 3.6rem 1fr}
 }
 
 /* hero rotating plate */
