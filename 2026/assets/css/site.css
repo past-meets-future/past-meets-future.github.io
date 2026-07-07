@@ -296,11 +296,48 @@ nav.site a[aria-current="page"]{border-bottom-color:var(--verm);color:var(--verm
 ul.topics{margin:0 0 1.4rem;padding-left:1.15rem}
 ul.topics li{margin-bottom:.5rem;line-height:1.55}
 
-/* mobile pass (2026-07-08) */
+/* mobile design (2026-07-08): dedicated phone layout, not just reflow */
+.mob{display:none}
+html{scroll-padding-top:3.4rem}
 .vfact dd{overflow-wrap:break-word}
+
+@media (max-width:48rem){
+  /* milestone bar: one line, always */
+  .dsk{display:none}
+  .mob{display:inline}
+  .bar{font-size:.66rem;letter-spacing:.05em;padding:.5rem 0}
+  .bar .wrap{flex-wrap:nowrap;gap:.9rem;justify-content:space-between}
+  .bar span,.bar a{white-space:nowrap}
+  /* nav: brand + theme toggle on row one, links in a tight row below */
+  nav.site .wrap{padding-top:.65rem;padding-bottom:.7rem;row-gap:.55rem}
+  .nav-mark{order:0;margin-right:auto}
+  .theme-btn{order:1;width:36px;height:36px}
+  nav.site ul{order:2;flex-basis:100%;margin:0;justify-content:space-between;gap:.8rem;flex-wrap:nowrap;overflow-x:auto;padding-bottom:2px}
+  nav.site ul a{font-size:.64rem;letter-spacing:.04em;white-space:nowrap}
+}
+
 @media (max-width:40rem){
+  /* tighter vertical rhythm on phones */
+  section.s{padding-top:2.4rem}
+  section.s,section.s:last-of-type{padding-bottom:1.9rem}
+  .hero{padding-top:1.7rem}
+  .hero .kicker{margin-bottom:.9rem}
+  h1.word{margin-bottom:1rem}
+  header.hero .hero-sub{margin-bottom:.8rem}
+  .venue-note{margin-bottom:1.5rem}
+  /* section-head side labels drop under the title, left-aligned */
+  .shead{margin-bottom:1.4rem;row-gap:.3rem}
+  .shead .right{flex-basis:100%;margin-left:0}
+  /* full-width tap-friendly CTAs */
+  .ctarow{gap:.7rem}
+  .ctarow .btn{flex:1 1 100%;text-align:center}
   .vfact{grid-template-columns:1fr;gap:.1rem;padding:.7rem 0}
   .vfact dt{line-height:1.7}
+}
+
+@media (max-width:23rem){
+  .bar{font-size:.6rem;letter-spacing:.03em}
+  .bar .wrap{gap:.6rem}
 }
 
 /* colophon credit register */
