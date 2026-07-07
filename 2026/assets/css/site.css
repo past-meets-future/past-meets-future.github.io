@@ -113,6 +113,19 @@ h1.word span{display:block}
   font-family:var(--mono);font-size:.82rem;letter-spacing:.06em;line-height:2.1;color:var(--ink)}
 .taskband .x{color:var(--verm);padding:0 .55rem}
 
+/* ============ SECTIONS ============ */
+section.s{padding:clamp(3rem,7vw,5rem) 0 0}
+.shead{display:flex;align-items:baseline;gap:1rem;border-top:3px solid var(--ink);padding-top:.75rem;margin-bottom:2rem;flex-wrap:wrap}
+.shead h2{font-family:var(--disp);font-weight:750;font-size:clamp(1.5rem,3vw,2.2rem);letter-spacing:-.01em;margin:0;text-transform:uppercase}
+.shead .no{font-family:var(--mono);font-size:.74rem;color:var(--verm);letter-spacing:.12em}
+.shead .right{margin-left:auto;font-family:var(--mono);font-size:.72rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
+
+/* about */
+.rqs{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:1.8rem}
+.rq{border-left:3px solid var(--lapis);padding-left:1.2rem}
+.rq .n{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--lapis);text-transform:uppercase;display:block;margin-bottom:.4rem}
+.rq p{font-size:1.02rem;margin:0;line-height:1.6}
+
 /* challenges */
 .chal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
 .chal{border:1px solid var(--line);border-top:3px solid var(--lapis);padding:1.2rem 1.3rem}
@@ -235,3 +248,13 @@ footer.colo a{color:#FF9E85}
 .hp-ctl{display:flex;gap:.9rem;align-items:center;justify-content:flex-end;margin-top:.6rem;font-family:var(--mono);font-size:.68rem;color:var(--mut);letter-spacing:.08em}
 .hp-btn{border:1px solid var(--line);background:none;color:var(--mut);font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .6rem;border-radius:4px;cursor:pointer;min-height:30px}
 .hp-btn:hover{color:var(--verm);border-color:var(--verm)}
+
+/* polish pass */
+section.s{padding-bottom:clamp(1.2rem,2.5vw,2rem)}
+section.s:last-of-type{padding-bottom:clamp(3rem,6vw,4.5rem)}
+.hero .kicker + .word{margin-top:.2rem}
+.s .btn{margin:.8rem 0 .4rem}
+.cfp-facts{margin-top:2rem}
+.rqs{margin-top:2.2rem}
+.rqs + p{margin-top:1.4rem}
+header.hero .hero-sub{margin-bottom:1rem}
