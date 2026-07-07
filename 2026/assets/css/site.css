@@ -130,7 +130,7 @@ section.s{padding:clamp(3rem,7vw,5rem) 0 0}
 /* challenges */
 .chal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
 .chal{border:1px solid var(--line);border-top:3px solid var(--lapis);padding:1.2rem 1.3rem}
-.chal.bridge{border-top-color:var(--verm);background:var(--card)}
+.chal.bridge{border-top-color:var(--verm);background:var(--card);grid-column:1/-1}
 .chal h3{font-family:var(--disp);font-weight:750;font-size:1.05rem;margin:0 0 .5rem;text-transform:uppercase;letter-spacing:.01em;line-height:1.2}
 .chal .cq{font-size:.95rem;font-style:italic;margin:0 0 .7rem;line-height:1.5}
 .chal .ci{font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--mut);margin:0;line-height:1.9;text-transform:uppercase}
@@ -286,3 +286,12 @@ nav.site a[aria-current="page"]{border-bottom-color:var(--verm);color:var(--verm
   :root:not([data-theme="light"]) .theme-btn .ico-moon{display:none}
 }
 .theme-btn:hover{border-color:var(--verm);color:var(--verm)}
+
+/* colophon credit register */
+.credits{border-top:1px solid var(--line)}
+.cr{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr);gap:1.4rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+.cr b{font-size:1rem;line-height:1.45}
+.cr b a{color:var(--ink);text-decoration-color:var(--lapis)}
+.cr b a:hover{color:var(--lapis)}
+.cr span{font-family:var(--mono);font-size:.74rem;letter-spacing:.03em;color:var(--mut);line-height:1.8}
+@media (max-width:56rem){.cr{grid-template-columns:1fr;gap:.3rem}}
