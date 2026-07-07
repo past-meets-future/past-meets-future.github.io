@@ -59,12 +59,10 @@ nav.site ul a.cta{color:var(--verm);font-weight:700}
 .hero{padding:clamp(2.4rem,5.5vw,4.4rem) 0 0;text-align:left}
 .hero{position:relative}
 .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 360'%3E%3Cg fill='none' stroke='%237A8082' stroke-opacity='.16'%3E%3Cg stroke-width='1.3'%3E%3Ccircle cx='62' cy='74' r='17'/%3E%3Cpath d='M62 47v54M35 74h54'/%3E%3C/g%3E%3Cg stroke-width='1' transform='rotate(14 268 96)'%3E%3Ccircle cx='268' cy='96' r='10'/%3E%3Cpath d='M268 80v32M252 96h32'/%3E%3C/g%3E%3Cg stroke-width='1.1' transform='rotate(-9 150 258)'%3E%3Ccircle cx='150' cy='258' r='13'/%3E%3Cpath d='M150 237v42M129 258h42'/%3E%3C/g%3E%3Cg stroke-width='.9'%3E%3Ccircle cx='316' cy='286' r='7'/%3E%3Cpath d='M316 274v24M304 286h24'/%3E%3C/g%3E%3Cpath stroke-width='1' d='M204 178h36M210 188h22' stroke-opacity='.12'/%3E%3Cpath stroke-width='1' d='M40 190h26M46 200h16' stroke-opacity='.12'/%3E%3C/g%3E%3C/svg%3E");
-  background-size:360px;opacity:.6;
+  background-image:url(../img/hero-texture-light.jpg);background-size:cover;background-position:center;opacity:.5;
   -webkit-mask-image:linear-gradient(#000 40%,transparent 92%);mask-image:linear-gradient(#000 40%,transparent 92%)}
-/* Swap for the gpt-image-2 texture when generated:
-   background-image:url("assets/img/hero-texture-light.jpg") (light) / -dark.jpg (dark);
-   keep opacity <=.5 and the fade mask so headline contrast never drops below AA */
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hero-bg{background-image:url(../img/hero-texture-dark.jpg)}}
+:root[data-theme="dark"] .hero-bg{background-image:url(../img/hero-texture-dark.jpg)}
 .hero .wrap{position:relative;z-index:1}
 .hero-top{display:grid;grid-template-columns:1fr minmax(300px,430px);gap:clamp(2rem,4vw,4.5rem);align-items:center;margin-bottom:1.8rem}
 .hero-plate{position:relative;justify-self:end;transform:rotate(-1.6deg)}
