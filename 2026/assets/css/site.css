@@ -264,6 +264,14 @@ header.hero .hero-sub{margin-bottom:1rem}
 .hp-btn{min-height:44px;min-width:44px}
 nav.site ul{align-items:center}
 nav.site a[aria-current="page"]{border-bottom-color:var(--verm);color:var(--verm)}
-.theme-btn{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;background:none;
-  border:1.5px solid var(--line);color:var(--ink);padding:.5rem .9rem;border-radius:99px;cursor:pointer;min-height:40px}
+.theme-btn{display:inline-flex;align-items:center;justify-content:center;background:none;
+  border:1.5px solid var(--line);color:var(--ink);width:40px;height:40px;padding:0;border-radius:50%;cursor:pointer}
+/* icon reflects the TARGET theme: moon in light, sun in dark */
+.theme-btn .ico-sun{display:none}
+:root[data-theme="dark"] .theme-btn .ico-sun{display:block}
+:root[data-theme="dark"] .theme-btn .ico-moon{display:none}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .theme-btn .ico-sun{display:block}
+  :root:not([data-theme="light"]) .theme-btn .ico-moon{display:none}
+}
 .theme-btn:hover{border-color:var(--verm);color:var(--verm)}
