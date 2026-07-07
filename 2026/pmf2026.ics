@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Past Meets Future//2026//EN
+BEGIN:VEVENT
+UID:pmf2026-deadline@pastmeetsfuture
+DTSTART;VALUE=DATE:20260730
+SUMMARY:Past Meets Future 2026 — papers due (11:59 pm AoE)
+DESCRIPTION:Email submissions to pastmeetsfuturehaiworkshop@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+UID:pmf2026-workshop@pastmeetsfuture
+DTSTART;TZID=America/New_York:20260927T090000
+DTEND;TZID=America/New_York:20260927T173000
+SUMMARY:Past Meets Future 2026 — full-day workshop (HCOMP ⊕ CI)
+LOCATION:VT Academic Building One, 3625 Potomac Ave, Alexandria, VA
+END:VEVENT
+END:VCALENDAR

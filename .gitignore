@@ -1,0 +1,13 @@
+# Internal planning/research — kept local, not published (contains candid design deliberations)
+vision.md
+research/
+DESIGN.md
+PLAN.md
+CLAUDE.md
+3640544.3645257.pdf
+
+# Tooling
+.agents/
+.claude/
+skills-lock.json
+.DS_Store

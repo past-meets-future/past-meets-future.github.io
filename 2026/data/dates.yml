@@ -1,0 +1,6 @@
+# Canonical dates — edit here FIRST, then update index.html to match (see MAINTENANCE.md)
+- {date: 2026-06-29, label: "Call for Participation announced", status: done}
+- {date: 2026-07-30, label: "Workshop papers due — email submission, 11:59 pm AoE", status: open}
+- {date: 2026-08-07, label: "Acceptance notifications", status: pending}
+- {date: 2026-08-22, label: "Conference early-registration deadline", status: pending}
+- {date: 2026-09-27, label: "Workshop day — full day, Alexandria, VA", status: pending}
