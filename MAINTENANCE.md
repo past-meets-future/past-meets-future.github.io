@@ -2,6 +2,7 @@
 
 | Task | Edit |
 |---|---|
+| CSS edits | Bump the `?v=N` query on the stylesheet link in all four index.html files (GitHub Pages caches CSS for 10 min; browsers longer) |
 | Deadline / date change | `2026/data/dates.yml`, then `2026/index.html`: milestone bar (top), fact tile "Papers due", CFP facts block, Key Dates table, `2026/pmf2026.ics` |
 | Keynote announced | `2026/data/schedule.yml` + Schedule table row "Keynote" (remove TBA chip) |
 | Accepted papers (after Aug 7) | `2026/data/papers.yml` + new "Accepted Works" section (copy the Key Dates section pattern); PDFs into `2026/assets/papers/` — never personal Drive links |

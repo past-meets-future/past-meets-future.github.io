@@ -250,10 +250,10 @@ footer.colo a{color:#FF9E85}
 .hp-btn:hover{color:var(--verm);border-color:var(--verm)}
 
 /* polish pass */
-section.s{padding-bottom:clamp(1.2rem,2.5vw,2rem)}
+section.s{padding-bottom:clamp(2.6rem,5vw,4rem)}
 section.s:last-of-type{padding-bottom:clamp(3rem,6vw,4.5rem)}
 .hero .kicker + .word{margin-top:.2rem}
-.s .btn{margin:.8rem 0 .4rem}
+.s .btn{margin:1.2rem 0 .5rem}
 .cfp-facts{margin-top:2rem}
 .rqs{margin-top:2.2rem}
 .rqs + p{margin-top:1.4rem}
