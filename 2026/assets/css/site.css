@@ -233,9 +233,14 @@ footer.colo a{color:#FF9E85}
   .f-top{grid-template-columns:1fr 1fr}
   .f-brand{grid-column:1/-1}
 }
+/* abridged phone footer: the burger nav already covers the Workshop links,
+   and the hero already states the full title */
 @media (max-width:40rem){
-  .f-top{grid-template-columns:1fr;gap:1.6rem}
-  .f-col a{padding:.42rem 0}
+  .f-top{grid-template-columns:1fr 1fr;gap:1.5rem}
+  .f-nav,.f-tag{display:none}
+  .f-name{margin-bottom:.4rem}
+  .f-col a{padding:.34rem 0}
+  .f-bot{margin-top:1.6rem;padding-top:1rem}
 }
 
 @media (max-width:60rem){
@@ -341,14 +346,15 @@ ul.topics li{margin-bottom:.5rem;line-height:1.55}
 
 /* mobile design (2026-07-08): dedicated phone layout, not just reflow */
 .mob{display:none}
-html{scroll-padding-top:3.4rem}
+@media (min-width:48rem){html{scroll-padding-top:3.4rem}}
 .vfact dd{overflow-wrap:break-word}
 
 @media (max-width:48rem){
-  /* milestone bar: one line, always */
+  /* milestone bar: one line, and static on phones (it scrolls away
+     instead of permanently claiming viewport; sticky stays on desktop) */
   .dsk{display:none}
   .mob{display:inline}
-  .bar{font-size:.66rem;letter-spacing:.05em;padding:.5rem 0}
+  .bar{position:static;font-size:.66rem;letter-spacing:.05em;padding:.5rem 0}
   .bar .wrap{flex-wrap:nowrap;gap:.9rem;justify-content:space-between}
   .bar span,.bar a{white-space:nowrap}
   /* nav: brand + theme toggle + burger on one row; links in a dropdown panel */
