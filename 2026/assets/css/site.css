@@ -383,3 +383,51 @@ ul.topics li{margin-bottom:.5rem;line-height:1.55}
 .cr b a:hover{color:var(--lapis)}
 .cr span{font-family:var(--mono);font-size:.74rem;letter-spacing:.03em;color:var(--mut);line-height:1.8}
 @media (max-width:56rem){.cr{grid-template-columns:1fr;gap:.3rem}}
+
+/* Supported By: sponsor logo on a dark plate (2026-07-08).
+   The lacquer ground quarantines VT's maroon/orange from the white page
+   and carries the reversed white lockup at full contrast in both themes. */
+.supports{display:flex;flex-wrap:wrap;gap:1.2rem}
+.support-plate{display:inline-flex;align-items:center;justify-content:center;
+  background:var(--lac);border:1px solid var(--line);border-radius:5px;
+  padding:clamp(1.3rem,3.4vw,2rem) clamp(1.7rem,5vw,3.1rem)}
+.support-plate img{display:block;width:auto;height:auto;max-width:100%;max-height:58px}
+.support-plate:hover{border-color:var(--verm)}
+@media (max-width:40rem){
+  .supports{display:block}
+  .support-plate{display:flex;width:100%;padding:1.5rem 1.1rem}
+  .support-plate img{max-height:44px}
+}
+
+/* Challenge-map figure + full-screen pan/zoom viewer (2026-07-08).
+   Enhances the published static image only; the live Miro board stays private. */
+.mapfig{margin:3rem 0 0}
+figure.mapfig{padding:0}
+.mapfig-open{display:block;width:100%;padding:0;margin:0;border:1px solid var(--line);
+  background:var(--card);position:relative;cursor:default;color:inherit}
+.mapfig-open img{display:block;width:100%}
+.mapfig-hint{display:none;position:absolute;right:.65rem;bottom:.65rem;
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;
+  color:#F3EFE8;background:rgba(17,14,11,.82);padding:.36rem .62rem;border-radius:4px;pointer-events:none}
+.js .mapfig-open{cursor:zoom-in}
+.js .mapfig-open:hover{border-color:var(--verm)}
+.js .mapfig-hint{display:block}
+figure.mapfig figcaption{font-family:var(--mono);font-size:.76rem;color:var(--mut);
+  margin-top:.5rem;letter-spacing:.05em}
+
+.maplb{position:fixed;inset:0;z-index:200;background:#0d0a08;
+  display:none;flex-direction:column}
+.maplb-bar{display:flex;align-items:center;gap:.55rem;
+  padding:.7rem clamp(1rem,3vw,1.6rem);border-bottom:1px solid rgba(243,239,232,.16)}
+.maplb-title{font-family:var(--mono);font-size:.72rem;letter-spacing:.09em;
+  text-transform:uppercase;color:#F3EFE8;margin-right:auto}
+.maplb-btn{display:inline-flex;align-items:center;justify-content:center;
+  min-width:42px;height:42px;padding:0 .7rem;background:none;
+  border:1px solid rgba(243,239,232,.3);color:#F3EFE8;
+  font-family:var(--mono);font-size:.82rem;letter-spacing:.04em;border-radius:4px;cursor:pointer}
+.maplb-btn:hover{border-color:#FF7757;color:#FF7757}
+.maplb-btn:focus-visible{outline:3px solid #FF7757;outline-offset:2px}
+.maplb-stage{flex:1;overflow:hidden;position:relative;touch-action:none;cursor:grab}
+.maplb-stage:active{cursor:grabbing}
+.maplb-stage img{position:absolute;top:0;left:0;transform-origin:0 0;max-width:none;
+  will-change:transform;user-select:none;-webkit-user-drag:none}
