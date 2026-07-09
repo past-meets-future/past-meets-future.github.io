@@ -70,11 +70,10 @@
       <div class="rq"><span class="n">Research question 2</span><p>How can the challenges and datasets inherent in these domains stimulate innovation in human-AI interaction methodologies and frameworks?</p></div>
     </div>
     <figure class="mapfig">
-      <button type="button" class="mapfig-open" id="mapOpen" aria-label="Open the 2025 challenge map full screen to pan and zoom">
-        <img src="../assets/img/miro-board-2025.jpg" width="2332" height="418" loading="lazy" alt="The 2025 Past Meets Future challenge map">
-        <span class="mapfig-hint" aria-hidden="true">Drag to pan · scroll to zoom</span>
-      </button>
-      <figcaption>THE FULL 2025 CHALLENGE MAP (MIRO BOARD) IS SHARED WITH ACCEPTED PARTICIPANTS</figcaption>
+      <div class="mapembed">
+        <iframe title="The 2025 Past Meets Future challenge map, an interactive Miro board" src="https://miro.com/app/live-embed/uXjVJsfMSrs=/?embedMode=view_only_without_ui&moveToViewport=-1957,-1733,3876,2122&embedId=359570223002" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <figcaption>THE 2025 CHALLENGE MAP · DRAG TO PAN, SCROLL TO ZOOM · <a href="https://miro.com/app/board/uXjVJsfMSrs=/?share_link_id=113812323947" target="_blank" rel="noopener">OPEN IN MIRO</a></figcaption>
     </figure>
   </div>
 </section>
@@ -144,81 +143,6 @@ try{localStorage.setItem('pmf-theme',n)}catch(e){}label()});label()})();
 function set(o){b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Close menu':'Open menu')}
 b.addEventListener('click',function(){set(n.classList.toggle('open'))});
 n.querySelectorAll('ul a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');set(false)})});
-})();
-</script>
-<script>
-/* Challenge-map pan/zoom viewer. Progressive enhancement: the static image
-   and its caption are fully present without JS; this only adds a full-screen
-   pannable, zoomable view of that same published image. */
-(function(){
-var open=document.getElementById('mapOpen');if(!open)return;
-var srcImg=open.querySelector('img'),lb=null,stage=null,img=null,last=null;
-var s=1,ox=0,oy=0,min=1,max=1;
-var pts={},pinch=0;
-function build(){
-  lb=document.createElement('div');lb.className='maplb';lb.setAttribute('role','dialog');
-  lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','2025 challenge map viewer');
-  lb.innerHTML='<div class="maplb-bar"><span class="maplb-title">2025 challenge map</span>'
-    +'<button type="button" class="maplb-btn" data-a="out" aria-label="Zoom out">−</button>'
-    +'<button type="button" class="maplb-btn" data-a="in" aria-label="Zoom in">+</button>'
-    +'<button type="button" class="maplb-btn" data-a="reset" aria-label="Reset view">Reset</button>'
-    +'<button type="button" class="maplb-btn" data-a="close" aria-label="Close viewer">Close ✕</button></div>'
-    +'<div class="maplb-stage"><img alt=""></div>';
-  document.body.appendChild(lb);
-  stage=lb.querySelector('.maplb-stage');img=lb.querySelector('img');
-  img.src=srcImg.currentSrc||srcImg.src;
-  lb.addEventListener('click',function(e){var a=e.target.closest('[data-a]');if(!a)return;
-    var k=a.getAttribute('data-a');
-    if(k==='close')close();else if(k==='reset')fit();
-    else zoomAt(stage.clientWidth/2,stage.clientHeight/2,k==='in'?1.4:1/1.4);});
-  stage.addEventListener('wheel',function(e){e.preventDefault();
-    var r=stage.getBoundingClientRect();
-    zoomAt(e.clientX-r.left,e.clientY-r.top,e.deltaY<0?1.12:1/1.12);},{passive:false});
-  stage.addEventListener('dblclick',function(e){var r=stage.getBoundingClientRect();
-    zoomAt(e.clientX-r.left,e.clientY-r.top,s>min*1.3?1/2.2:2.2);});
-  stage.addEventListener('pointerdown',function(e){stage.setPointerCapture(e.pointerId);
-    pts[e.pointerId]={x:e.clientX,y:e.clientY};last={x:e.clientX,y:e.clientY};
-    if(Object.keys(pts).length===2)pinch=dist();});
-  stage.addEventListener('pointermove',function(e){if(!pts[e.pointerId])return;
-    var ids=Object.keys(pts);
-    if(ids.length===2){pts[e.pointerId]={x:e.clientX,y:e.clientY};
-      var d=dist();if(pinch){var r=stage.getBoundingClientRect(),m=mid();
-        zoomAt(m.x-r.left,m.y-r.top,d/pinch);}pinch=d;return;}
-    var dx=e.clientX-last.x,dy=e.clientY-last.y;last={x:e.clientX,y:e.clientY};
-    ox+=dx;oy+=dy;pts[e.pointerId]={x:e.clientX,y:e.clientY};render();});
-  function up(e){delete pts[e.pointerId];pinch=0;
-    if(Object.keys(pts).length===1){var id=Object.keys(pts)[0];last={x:pts[id].x,y:pts[id].y};}}
-  stage.addEventListener('pointerup',up);stage.addEventListener('pointercancel',up);
-  document.addEventListener('keydown',function(e){
-    if(!lb||lb.style.display==='none')return;
-    if(e.key==='Escape')close();
-    else if(e.key==='+'||e.key==='=')zoomAt(stage.clientWidth/2,stage.clientHeight/2,1.4);
-    else if(e.key==='-')zoomAt(stage.clientWidth/2,stage.clientHeight/2,1/1.4);
-    else if(e.key==='ArrowLeft'){ox+=60;render();}
-    else if(e.key==='ArrowRight'){ox-=60;render();}
-    else if(e.key==='ArrowUp'){oy+=60;render();}
-    else if(e.key==='ArrowDown'){oy-=60;render();}});
-}
-function dist(){var v=Object.keys(pts).map(function(k){return pts[k];});
-  return Math.hypot(v[0].x-v[1].x,v[0].y-v[1].y);}
-function mid(){var v=Object.keys(pts).map(function(k){return pts[k];});
-  return {x:(v[0].x+v[1].x)/2,y:(v[0].y+v[1].y)/2};}
-function iw(){return img.naturalWidth||2332;}
-function ih(){return img.naturalHeight||418;}
-function clamp(){var w=iw()*s,h=ih()*s,SW=stage.clientWidth,SH=stage.clientHeight;
-  ox=w<=SW?(SW-w)/2:Math.min(0,Math.max(SW-w,ox));
-  oy=h<=SH?(SH-h)/2:Math.min(0,Math.max(SH-h,oy));}
-function render(){clamp();img.style.transform='translate('+ox+'px,'+oy+'px) scale('+s+')';}
-function zoomAt(cx,cy,f){var ns=Math.min(max,Math.max(min,s*f));
-  var px=(cx-ox)/s,py=(cy-oy)/s;s=ns;ox=cx-px*s;oy=cy-py*s;render();}
-function fit(){var SW=stage.clientWidth,SH=stage.clientHeight;
-  min=Math.min(SW/iw(),SH/ih());max=min*9;s=min;
-  ox=(SW-iw()*s)/2;oy=(SH-ih()*s)/2;render();}
-function open_(){if(!lb)build();lb.style.display='flex';document.documentElement.style.overflow='hidden';
-  var go=function(){fit();lb.querySelector('[data-a="close"]').focus();};
-  if(img.complete&&img.naturalWidth)go();else img.onload=go;}
-function close(){lb.style.display='none';document.documentElement.style.overflow='';open.focus();}
-open.addEventListener('click',open_);
 })();
 </script>
 </body>

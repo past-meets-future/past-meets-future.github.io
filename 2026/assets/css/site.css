@@ -403,36 +403,16 @@ ul.topics li{margin-bottom:.5rem;line-height:1.55}
   .support-plate img{max-height:44px}
 }
 
-/* Challenge-map figure + full-screen pan/zoom viewer (2026-07-08).
-   Pans and zooms the published static snapshot; the live Miro board stays
-   private (organizer decision 2026-07-07), so nothing new is exposed. */
+/* Challenge-map: live Miro board embed (2026-07-09). The board was made
+   public view-only so participants can pan/zoom it in the browser. If a
+   visitor's network blocks miro.com, the "open in Miro" caption link and the
+   named topic clusters above stand in; a cross-origin iframe error can't be
+   detected, so there is no image fallback (it would only be an unused fetch). */
 .mapfig{margin:3rem 0 0}
 figure.mapfig{padding:0}
-.mapfig-open{display:block;width:100%;padding:0;margin:0;border:1px solid var(--line);
-  background:var(--card);position:relative;cursor:default;color:inherit}
-.mapfig-open img{display:block;width:100%}
-.mapfig-hint{display:none;position:absolute;right:.65rem;bottom:.65rem;
-  font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;
-  color:#F3EFE8;background:rgba(17,14,11,.82);padding:.36rem .62rem;border-radius:4px;pointer-events:none}
-.js .mapfig-open{cursor:zoom-in}
-.js .mapfig-open:hover{border-color:var(--verm)}
-.js .mapfig-hint{display:block}
+.mapembed{position:relative;width:100%;height:clamp(380px,60vh,640px);
+  border:1px solid var(--line);background:var(--card);overflow:hidden;border-radius:2px}
+.mapembed iframe{position:absolute;inset:0;width:100%;height:100%;display:block;border:0}
 figure.mapfig figcaption{font-family:var(--mono);font-size:.76rem;color:var(--mut);
-  margin-top:.5rem;letter-spacing:.05em}
-
-.maplb{position:fixed;inset:0;z-index:200;background:#0d0a08;
-  display:none;flex-direction:column}
-.maplb-bar{display:flex;align-items:center;gap:.55rem;
-  padding:.7rem clamp(1rem,3vw,1.6rem);border-bottom:1px solid rgba(243,239,232,.16)}
-.maplb-title{font-family:var(--mono);font-size:.72rem;letter-spacing:.09em;
-  text-transform:uppercase;color:#F3EFE8;margin-right:auto}
-.maplb-btn{display:inline-flex;align-items:center;justify-content:center;
-  min-width:42px;height:42px;padding:0 .7rem;background:none;
-  border:1px solid rgba(243,239,232,.3);color:#F3EFE8;
-  font-family:var(--mono);font-size:.82rem;letter-spacing:.04em;border-radius:4px;cursor:pointer}
-.maplb-btn:hover{border-color:#FF7757;color:#FF7757}
-.maplb-btn:focus-visible{outline:3px solid #FF7757;outline-offset:2px}
-.maplb-stage{flex:1;overflow:hidden;position:relative;touch-action:none;cursor:grab}
-.maplb-stage:active{cursor:grabbing}
-.maplb-stage img{position:absolute;top:0;left:0;transform-origin:0 0;max-width:none;
-  will-change:transform;user-select:none;-webkit-user-drag:none}
+  margin-top:.55rem;letter-spacing:.05em}
+figure.mapfig figcaption a{color:var(--lapis);text-decoration-thickness:1px;text-underline-offset:2px}
