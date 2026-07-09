@@ -416,3 +416,16 @@ figure.mapfig{padding:0}
 figure.mapfig figcaption{font-family:var(--mono);font-size:.76rem;color:var(--mut);
   margin-top:.55rem;letter-spacing:.05em}
 figure.mapfig figcaption a{color:var(--lapis);text-decoration-thickness:1px;text-underline-offset:2px}
+
+/* Co-located conference marks in the footer (2026-07-09): "workshop
+   organized at" HCOMP 2026 and CI 2026. The footer is always dark, so the
+   monochrome CI mark is reversed to white; HCOMP keeps its gradient. Sized
+   to the same height so the two marks read as peers. */
+.f-orgs{display:flex;align-items:center;flex-wrap:wrap;gap:.7rem 1.5rem;
+  margin-bottom:1.4rem;padding-bottom:1.3rem;border-bottom:1px solid rgba(243,239,233,.15)}
+.f-orgs-lbl{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;
+  text-transform:uppercase;opacity:.72}
+.f-orgs a{display:inline-flex;align-items:center}
+.f-orgs a:hover{opacity:.72}
+.f-logo{display:block;width:auto;height:34px}
+.f-logo.cimono{height:34px;filter:invert(1)}
