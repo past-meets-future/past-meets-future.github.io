@@ -429,3 +429,9 @@ figure.mapfig figcaption a{color:var(--lapis);text-decoration-thickness:1px;text
 .f-orgs a:hover{opacity:.72}
 .f-logo{display:block;width:auto;height:34px}
 .f-logo.cimono{height:34px;filter:invert(1)}
+/* phones: label on its own line, both marks together on the next line */
+@media (max-width:30rem){
+  .f-orgs{gap:.55rem 1.1rem}
+  .f-orgs-lbl{flex-basis:100%}
+  .f-logo,.f-logo.cimono{height:30px}
+}
