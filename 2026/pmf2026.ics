@@ -3,15 +3,21 @@ VERSION:2.0
 PRODID:-//Past Meets Future//2026//EN
 BEGIN:VEVENT
 UID:pmf2026-deadline@pastmeetsfuture
-DTSTART;VALUE=DATE:20260730
-SUMMARY:Past Meets Future 2026 — papers due (11:59 pm AoE)
-DESCRIPTION:Email submissions to pastmeetsfuturehaiworkshop@gmail.com
+DTSTART;VALUE=DATE:20260901
+SUMMARY:Past Meets Future 2026 · final submission cutoff, rolling basis (11:59 pm AoE)
+DESCRIPTION:Email submissions to pastmeetsfuturehaiworkshop@gmail.com. Accepted on a rolling basis since July 30.
+END:VEVENT
+BEGIN:VEVENT
+UID:pmf2026-earlybird@pastmeetsfuture
+DTSTART;VALUE=DATE:20260822
+SUMMARY:Past Meets Future 2026 · early-bird registration deadline
+DESCRIPTION:Register at https://ci.acm.org/2026/registration.html. One registration covers HCOMP and CI; you can register without submitting a paper.
 END:VEVENT
 BEGIN:VEVENT
 UID:pmf2026-workshop@pastmeetsfuture
 DTSTART;TZID=America/New_York:20260927T090000
 DTEND;TZID=America/New_York:20260927T170000
-SUMMARY:Past Meets Future 2026 — full-day workshop (HCOMP ⊕ CI)
+SUMMARY:Past Meets Future 2026 · full-day workshop (HCOMP ⊕ CI)
 LOCATION:VT Academic Building One, 3625 Potomac Ave, Alexandria, VA
 END:VEVENT
 END:VCALENDAR
