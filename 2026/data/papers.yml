@@ -1,2 +1,13 @@
 # Accepted papers land here after Aug 7 notifications.
-# - {title: "", authors: "", format: A|B|C|D, pdf: "assets/papers/..."}
+# - {title: "", authors: "", format: A|B|C, pdf: "assets/papers/..."}
+# format: A position paper, B published paper, C systems & prototypes (see cfp/index.html)
+# pdf: "" means the author accepted but the work is not intended for public posting
+
+- {title: "Agentic Coding for Archives: Workshop Report", authors: "Katrina Fenlon", format: "A", pdf: "assets/papers/fenlon-agentic.pdf"}
+- {title: "A Knowledge Graph Approach to the Preservation of Creative Code-Based Works with Large Language Models: A Pilot Study Using Max-Based Compositions for the Laptop Orchestra of Louisiana", authors: "Lindsey Hartman", format: "A", pdf: ""}
+- {title: "Kushya Guide", authors: "David von Huth", format: "C", pdf: "assets/papers/vonhuth-kushya.pdf"}
+- {title: "What, when, and where is AI? A Workshop and Discussion Group for Researchers", authors: "Matthew Westerby", format: "A", pdf: ""}
+- {title: "Neon Flashing Signs: AI, Sensemaking, and the Threshold of the Public Library Makerspace", authors: "Shannon Crawford Barniskis", format: "A", pdf: "assets/papers/barniskis-neon.pdf"}
+- {title: "How GenAI Endangers Indigenous Artworks: A Rights and Justice Lens", authors: "Mukta Gawde", format: "B", pdf: "assets/papers/gawde-genai.pdf"}
+- {title: "Applying Humanistic Methods to Volumetric Capture", authors: "Sarah Tucker", format: "A", pdf: "assets/papers/tucker-applying.pdf"}
+- {title: "Cataloger Judgment and Human-in-the-Loop: Artificial Intelligence in Library Technical Services", authors: "Jen M. Jones", format: "B", pdf: "assets/papers/jones-cataloger.pdf"}
