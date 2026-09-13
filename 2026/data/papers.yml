@@ -1,14 +1,15 @@
 # Accepted papers land here after Aug 7 notifications.
-# - {title: "", authors: "", format: A|B|C, pdf: "assets/papers/..."}
+# - {title: "", authors: "", format: A|B|C, pdf: "assets/papers/..." | "https://..."}
 # format: A position paper, B published paper, C systems & prototypes (see cfp/index.html)
 # pdf: "" means the author accepted but the work is not intended for public posting
+# pdf may also be a full URL to an external repository/DOI record instead of a local file
 
 - {title: "Agentic Coding for Archives: Workshop Report", authors: "Katrina Fenlon", format: "A", pdf: "assets/papers/fenlon-agentic.pdf"}
 - {title: "A Knowledge Graph Approach to the Preservation of Creative Code-Based Works with Large Language Models: A Pilot Study Using Max-Based Compositions for the Laptop Orchestra of Louisiana", authors: "Lindsey Hartman", format: "A", pdf: "assets/papers/hartman-knowledge.pdf"}
 - {title: "Kushya Guide", authors: "David von Huth", format: "C", pdf: "assets/papers/vonhuth-kushya.pdf"}
 - {title: "What, when, and where is AI? A Workshop and Discussion Group for Researchers", authors: "Matthew Westerby", format: "A", pdf: "assets/papers/westerby-ai.pdf"}
 - {title: "Neon Flashing Signs: AI, Sensemaking, and the Threshold of the Public Library Makerspace", authors: "Shannon Crawford Barniskis", format: "A", pdf: "assets/papers/barniskis-neon.pdf"}
-- {title: "How GenAI Endangers Indigenous Artworks: A Rights and Justice Lens", authors: "Mukta Gawde", format: "B", pdf: "assets/papers/gawde-genai.pdf"}
+- {title: "How GenAI Endangers Indigenous Artworks: A Rights and Justice Lens", authors: "Mukta Gawde", format: "B", pdf: "https://repository.digital.georgetown.edu/handle/10822/1107846"}
 - {title: "Applying Humanistic Methods to Volumetric Capture", authors: "Sarah Tucker", format: "A", pdf: "assets/papers/tucker-applying.pdf"}
 - {title: "Cataloger Judgment and Human-in-the-Loop: Artificial Intelligence in Library Technical Services", authors: "Jen M. Jones", format: "B", pdf: "assets/papers/jones-cataloger.pdf"}
 - {title: "Exploring A Large Archival Collection through LLM Entity Resolution", authors: "Tahura Turabi", format: "B", pdf: "assets/papers/turabi-exploring.pdf"}
