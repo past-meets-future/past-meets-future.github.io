@@ -4,7 +4,7 @@
 # pdf: "" means the author accepted but the work is not intended for public posting
 
 - {title: "Agentic Coding for Archives: Workshop Report", authors: "Katrina Fenlon", format: "A", pdf: "assets/papers/fenlon-agentic.pdf"}
-- {title: "A Knowledge Graph Approach to the Preservation of Creative Code-Based Works with Large Language Models: A Pilot Study Using Max-Based Compositions for the Laptop Orchestra of Louisiana", authors: "Lindsey Hartman", format: "A", pdf: ""}
+- {title: "A Knowledge Graph Approach to the Preservation of Creative Code-Based Works with Large Language Models: A Pilot Study Using Max-Based Compositions for the Laptop Orchestra of Louisiana", authors: "Lindsey Hartman", format: "A", pdf: "assets/papers/hartman-knowledge.pdf"}
 - {title: "Kushya Guide", authors: "David von Huth", format: "C", pdf: "assets/papers/vonhuth-kushya.pdf"}
 - {title: "What, when, and where is AI? A Workshop and Discussion Group for Researchers", authors: "Matthew Westerby", format: "A", pdf: "assets/papers/westerby-ai.pdf"}
 - {title: "Neon Flashing Signs: AI, Sensemaking, and the Threshold of the Public Library Makerspace", authors: "Shannon Crawford Barniskis", format: "A", pdf: "assets/papers/barniskis-neon.pdf"}
