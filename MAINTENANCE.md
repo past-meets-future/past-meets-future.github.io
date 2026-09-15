@@ -6,6 +6,7 @@
 | Deadline / date change | `2026/data/dates.yml`, then: milestone bar (top of ALL four pages), homepage fact tiles, CFP facts block + Key Dates table (`2026/cfp/`), attend-page hero line, `2026/pmf2026.ics` |
 | Early registration | NO date on our site until the conference sites publish one — the approved line everywhere is "Early-bird registration and its deadline will be announced on the ACM HCOMP 2026 and CI 2026 websites" |
 | Keynote announced | `2026/data/schedule.yml` + Schedule table row "Keynote" (remove TBA chip) |
+| Keynote title / abstract / bio / photo | `2026/data/keynote.yml` + the `#keynote` card on `2026/index.html` (title spans the top, speaker + bio in the left column, abstract in the right). Portrait goes in `2026/assets/img/keynote/`, renders grayscale via CSS, and is credited in the colophon with its `photo_source` |
 | Accepted papers (after Aug 7) | `2026/data/papers.yml` + new "Accepted Works" section (copy the Key Dates section pattern); PDFs into `2026/assets/papers/` — never personal Drive links |
 | Organizer change | `2026/data/organizers.yml` (fields: `name`, `role`, `institution`, `url`) + Organizers section. Cards are exactly TWO lines: role first, institution alone on the second (explicit `<br>`). No headshots |
 | Schedule change | `2026/data/schedule.yml` + Schedule table on `2026/attend/`. Header says "tentative" until the final program lands (Aug 7) — never "draft" |

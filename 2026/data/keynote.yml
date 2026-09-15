@@ -4,6 +4,8 @@ name: "Mike Trizna"
 role: "Data Scientist, Data Science Lab"
 institution: "Smithsonian Institution"
 url: "https://datascience.si.edu/people/mike-trizna"
+photo: "assets/img/keynote/trizna.jpg"
+photo_source: "https://datascience.si.edu/people/mike-trizna (public profile photo)"
 title: "Trust in the Loop: How Libraries, Archives, and Museums Can Balance Institutional Expertise and AI-Assisted Discovery"
 abstract: "Libraries, archives, and museums are widely trusted as stewards of authoritative records. At the same time, the data underlying these collections is heterogeneous, shaped by different institutional practices, and often tied closely to the historical and scientific contexts in which it was created. As institutions begin to apply AI methods to support discovery and interpretation, a central challenge emerges: how do we maintain trust in authoritative records while inviting users into the uncertainty and iteration of AI-driven processes?
 
