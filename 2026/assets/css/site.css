@@ -450,11 +450,11 @@ figure.mapfig figcaption a{color:var(--lapis);text-decoration-thickness:1px;text
 .keynote{border:1px solid var(--line);padding:clamp(1.3rem,3vw,2.1rem)}
 .kn-title{font-family:var(--disp);font-weight:750;font-size:clamp(1.35rem,3.2vw,1.95rem);
   line-height:1.15;letter-spacing:-.01em;max-width:52ch;margin:0}
-.kn-body{display:grid;grid-template-columns:19rem minmax(0,64ch);
+.kn-body{display:grid;grid-template-columns:19rem minmax(0,68ch);
   gap:0 clamp(1.4rem,4vw,3rem);align-items:start;margin-top:1.6rem}
 .kn-who{grid-column:1;grid-row:1}
 .kn-abstract{grid-column:2;grid-row:1/span 2}
-.kn-bio{grid-column:1;grid-row:2;margin-top:2.4rem}
+.kn-bio{grid-column:1;grid-row:2;margin-top:1.4rem}
 .kn-name{font-family:var(--disp);font-weight:700;font-size:1.3rem;
   line-height:1.25;letter-spacing:-.01em}
 .kn-name a{color:var(--ink);text-decoration-color:var(--lapis)}
