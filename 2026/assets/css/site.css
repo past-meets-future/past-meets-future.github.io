@@ -442,12 +442,31 @@ figure.mapfig figcaption a{color:var(--lapis);text-decoration-thickness:1px;text
   .f-logo,.f-logo.cimono{height:30px}
 }
 
-/* Keynote (2026-07-24): name, role, institution only; no photo or bio yet
-   (permission pending): honest partial-info state, nothing fabricated. */
-.keynote{border:1px solid var(--line);padding:1.5rem 1.7rem;display:inline-block}
-.kn-name{font-family:var(--disp);font-weight:750;font-size:clamp(1.35rem,3.2vw,1.95rem);
-  line-height:1.15;letter-spacing:-.01em}
+/* Keynote (2026-09-15): talk title leads at full width, then a two-column body,
+   speaker + bio in the left sidebar and the abstract in the right measure column.
+   DOM order is who > abstract > bio so the stacked view reads in the conventional
+   program order (title, speaker, abstract, bio); the desktop side-by-side is grid
+   placement only. Photo still pending permission: honest partial-info state. */
+.keynote{border:1px solid var(--line);padding:clamp(1.3rem,3vw,2.1rem)}
+.kn-title{font-family:var(--disp);font-weight:750;font-size:clamp(1.35rem,3.2vw,1.95rem);
+  line-height:1.15;letter-spacing:-.01em;max-width:52ch;margin:0}
+.kn-body{display:grid;grid-template-columns:19rem minmax(0,64ch);
+  gap:0 clamp(1.4rem,4vw,3rem);align-items:start;margin-top:1.6rem}
+.kn-who{grid-column:1;grid-row:1}
+.kn-abstract{grid-column:2;grid-row:1/span 2}
+.kn-bio{grid-column:1;grid-row:2;margin-top:2.4rem}
+.kn-name{font-family:var(--disp);font-weight:700;font-size:1.3rem;
+  line-height:1.25;letter-spacing:-.01em}
 .kn-name a{color:var(--ink);text-decoration-color:var(--lapis)}
 .kn-name a:hover{color:var(--lapis)}
-.kn-role{font-size:.98rem;color:var(--mut);line-height:1.5;margin-top:.5rem}
-@media (max-width:40rem){.keynote{display:block;padding:1.2rem 1.3rem}}
+.kn-role{font-size:.92rem;color:var(--mut);line-height:1.5;margin-top:.4rem}
+.kn-lbl{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mut);border-bottom:1px solid var(--line);padding-bottom:.4rem;margin-bottom:.75rem}
+.kn-abstract p{font-size:1rem;line-height:1.65;margin:0 0 .9rem}
+.kn-bio p{font-size:.92rem;line-height:1.6;color:var(--mut);margin:0 0 .75rem}
+.kn-abstract p:last-child,.kn-bio p:last-child{margin-bottom:0}
+@media (max-width:60rem){
+  .kn-body{grid-template-columns:1fr;gap:1.6rem}
+  .kn-who,.kn-abstract,.kn-bio{grid-column:auto;grid-row:auto}
+  .kn-bio{margin-top:.4rem}
+}
