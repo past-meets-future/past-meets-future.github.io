@@ -155,6 +155,11 @@ section.s{padding:clamp(3rem,7vw,5rem) 0 0}
   text-transform:uppercase;color:#fff;background:#C1301C;padding:.32rem .6rem;border-radius:4px}
 
 /* dates ledger */
+/* visually hidden, still announced by screen readers: used on table captions,
+   which name each ledger for table-by-table navigation without repeating the
+   section heading on screen (2026-09-19) */
+.vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;
+  clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
 table.ledger{width:100%;border-collapse:collapse;font-size:1rem}
 .ledger th{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;text-align:left;color:var(--mut);font-weight:500;border-bottom:2px solid var(--ink);padding:.5rem .8rem .5rem 0}
 .ledger td{border-bottom:1px solid var(--line);padding:.9rem .8rem .9rem 0;vertical-align:middle}
